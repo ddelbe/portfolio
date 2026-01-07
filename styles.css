@@ -1,0 +1,93 @@
+/* ---------- DEFAULT THEME VARIABLES (LIGHT) ---------- */
+:root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --accent: #0055ff;
+    --card-bg: #f7f7f7;
+    --font: "Inter", sans-serif;
+}
+
+/* ---------- DARK THEME VARIABLES ---------- */
+[data-theme="dark"] {
+    --bg: #0f0f0f;
+    --text: #f0f0f0;
+    --accent: #ff8800;
+    --card-bg: #1b1b1b;
+    --font: "Inter", sans-serif;
+}
+
+/* ---------- FUTURE EXTRA THEMES EXAMPLE ---------- */
+/*
+[data-theme="retro"] {
+    --bg: #fef3d4;
+    --text: #3c2f2f;
+    --accent: #b03a2e;
+    --card-bg: #f8e5b8;
+    --font: "Courier New", monospace;
+}
+*/
+
+/* ---------- BASE STYLES ---------- */
+body {
+    margin: 0;
+    font-family: var(--font);
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+}
+
+.theme-btn {
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    background: var(--accent);
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.hero img {
+    width: 240px;
+    transition: opacity 0.3s ease;
+}
+
+.section {
+    padding: 3rem 1rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.card {
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    text-align: center;
+    font-weight: 500;
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+}

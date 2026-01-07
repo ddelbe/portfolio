@@ -1,54 +1,916 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - ddelbe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light-bg: #ecf0f1;
+            --dark-bg: #1a1a1a;
+            --text-light: #2c3e50;
+            --text-dark: #ecf0f1;
+            --border: #bdc3c7;
+            --success: #27ae60;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-light);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark-mode {
+            background-color: var(--dark-bg);
+            color: var(--text-dark);
+        }
+
+        /* Header and Navigation */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        body.dark-mode header {
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a3a52 100%);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-controls {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-menu a:hover {
+            opacity: 0.8;
+        }
+
+        .control-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-control {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .btn-control:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Main Container */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+            border-radius: 10px;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        body.dark-mode .hero {
+            background: linear-gradient(135deg, #1a3a52 0%, #8b3a2f 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            background: white;
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 0.5rem;
+        }
+
+        body.dark-mode section h2 {
+            color: var(--text-dark);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .portfolio-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        body.dark-mode .portfolio-item {
+            background: #2a2a2a;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .portfolio-item-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .portfolio-item-content {
+            padding: 1.5rem;
+        }
+
+        .portfolio-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        body.dark-mode .portfolio-item h3 {
+            color: var(--secondary);
+        }
+
+        .portfolio-item p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        body.dark-mode .portfolio-item p {
+            color: #aaa;
+        }
+
+        .portfolio-item-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: var(--secondary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--secondary);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        body.dark-mode .contact-section {
+            background: #1a3a52;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .contact-item {
+            padding: 1rem;
+        }
+
+        .contact-item h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        body.dark-mode footer {
+            background: #0f0f0f;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-menu {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .control-buttons {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="#" class="logo">ddelbe</a>
+            <ul class="nav-menu">
+                <li><a href="#logo" data-i18n="nav_logo">Logo Design</a></li>
+                <li><a href="#print" data-i18n="nav_print">Print Design</a></li>
+                <li><a href="#mascot" data-i18n="nav_mascot">Mascot</a></li>
+                <li><a href="#font" data-i18n="nav_font">Custom Font</a></li>
+                <li><a href="#illustrations" data-i18n="nav_illustrations">Illustrations</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+            <div class="control-buttons">
+                <button class="btn-control" id="themeToggle" data-i18n="theme_toggle">🌙 Dark Mode</button>
+                <select class="btn-control" id="languageSelect" data-i18n="language_label">
+                    <option value="en" data-i18n="lang_english">English</option>
+                    <option value="es" data-i18n="lang_spanish">Spanish</option>
+                    <option value="fr" data-i18n="lang_french">French</option>
+                </select>
+            </div>
+        </nav>
+    </header>
 
-<header class="header">
-    <h1 class="logo">YourName</h1>
-    <button id="themeToggle" class="theme-btn">Change Theme</button>
-</header>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 data-i18n="hero_title">Creative Design Portfolio</h1>
+            <p data-i18n="hero_subtitle">Bringing Ideas to Life Through Design</p>
+            <button class="cta-button" data-i18n="cta_explore">Explore My Work</button>
+        </section>
 
-<section class="hero">
-    <img id="heroImage" src="assets/hero-light.svg" alt="Hero Illustration">
-    <h2>Designer • Illustrator • Creative Thinker</h2>
-    <p>Welcome to my portfolio — explore my latest work.</p>
-</section>
+        <!-- Logo Design Section -->
+        <section id="logo">
+            <h2 data-i18n="section_logos">Logo Design</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image">🏢</div>
+                    <div class="portfolio-item-content">
+                        <h3 data-i18n="logo_corp_title">Corporate Identity</h3>
+                        <p data-i18n="logo_corp_desc">Professional logos for businesses and startups with modern design principles</p>
+                        <div class="portfolio-item-tags">
+                            <span class="tag">Branding</span>
+                            <span class="tag">Vector</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image">🎨</div>
+                    <div class="portfolio-item-content">
+                        <h3 data-i18n="logo_creative_title">Creative Marks</h3>
+                        <p data-i18n="logo_creative_desc">Unique and memorable logo designs that capture brand essence</p>
+                        <div class="portfolio-item-tags">
+                            <span class="tag">Creative</span>
+                            <span class="tag">Symbolic</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image">✨</div>
+                    <div class="portfolio-item-content">
+                        <h3 data-i18n="logo_modern_title">Modern Designs</h3>
+                        <p data-i18n="logo_modern_desc">Contemporary logo designs with minimal aesthetics</p>
+                        <div class="portfolio-item-tags">
+                            <span class="tag">Minimal</span>
+                            <span class="tag">Modern</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section id="about" class="section">
-    <h3>About Me</h3>
-    <p>
-        I'm a graphic designer and illustrator focusing on UX/UI design, visual identity, and storytelling 
-        through meaningful visuals.
-    </p>
-</section>
+        <!-- Print Design Section -->
+        <section id="print">
+            <h2 data-i18n="section_print">Print Design</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image">📇</div>
+                    <div class="portfolio-item-content">
+                        <h3 data-i18n="print_business_title">Business Cards</h3>
+                        <p data-i18n="print_business_desc">Professional business card designs that make a lasting impression</p>
+                        <div class="portfolio-item-tags">
+                            <span class="tag">Print</span>
+                            <span class="tag">Professional</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image">📄</div>
+                    <div class="portfolio-item-content">
+                        <h3 data-i18n="print_stationery_title">Stationery Sets</h3>
+                        <p data-i18n="print_stationery_desc">Complete stationery designs including letterheads and envelopes</p>
+                        <div class="portfolio-item-tags">
+                            <span class="tag">Stationery</span>
+                            <span class="tag">Branding</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image">🎁</div>
+                    <div class="portfolio-item-content">
+                        <h3 data-i18n="print_packaging_title">Packaging Design</h3>
+                        <p data-i18n="print_packaging_desc">Eye-catching packaging designs for retail and promotional products</p>
+                        <div class="portfolio-item-tags">
+                            <span class="tag">Packaging</span>
+                            <span class="tag">Retail</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section id="design" class="section">
-    <h3>Design Projects</h3>
-    <div class="grid">
-        <div class="card">Design Project 1</div>
-        <div class="card">Design Project 2</div>
-        <div class="card">Design Project 3</div>
-    </div>
-</section>
+        <!-- Mascot Design Section -->
+        <section id="mascot">
+            <h2 data-i18n="section_mascots">Mascot Design</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image">🦁</div>
+                    <div class="portfolio-item-content">
+                        <h3 data-i18n="mascot_animal_title">Animal Mascots</h3>
+                        <p data-i18n="mascot_animal_desc">Playful and engaging animal character designs for brands</p>
+                        <div class="portfolio-item-tags">
+                            <span class="tag">Characters</span>
+                            <span class="tag">Fun</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image">👽</div>
+                    <div class="portfolio-item-content">
+                        <h3 data-i18n="mascot_custom_title">Custom Characters</h3>
+                        <p data-i18n="mascot_custom_desc">Original character designs tailored to brand identity</p>
+                        <div class="portfolio-item-tags">
+                            <span class="tag">Custom</span>
+                            <span class="tag">Original</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image">🎭</div>
+                    <div class="portfolio-item-content">
+                        <h3 data-i18n="mascot_emotional_title">Emotional Characters</h3>
+                        <p data-i18n="mascot_emotional_desc">Characters with diverse expressions for marketing campaigns</p>
+                        <div class="portfolio-item-tags">
+                            <span class="tag">Expression</span>
+                            <span class="tag">Marketing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section id="illustrations" class="section">
-    <h3>Illustrations</h3>
-    <div class="grid">
-        <div class="card">Illustration 1</div>
-        <div class="card">Illustration 2</div>
-        <div class="card">Illustration 3</div>
-    </div>
-</section>
+        <!-- Custom Font Section -->
+        <section id="font">
+            <h2 data-i18n="section_fonts">Custom Font Design</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image">🔤</div>
+                    <div class="portfolio-item-content">
+                        <h3 data-i18n="font_serif_title">Serif Typefaces</h3>
+                        <p data-i18n="font_serif_desc">Elegant serif fonts suitable for premium brands and publications</p>
+                        <div class="portfolio-item-tags">
+                            <span class="tag">Typography</span>
+                            <span class="tag">Elegant</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image">🔡</div>
+                    <div class="portfolio-item-content">
+                        <h3 data-i18n="font_sans_title">Sans-Serif Fonts</h3>
+                        <p data-i18n="font_sans_desc">Modern sans-serif typefaces for digital and print applications</p>
+                        <div class="portfolio-item-tags">
+                            <span class="tag">Modern</span>
+                            <span class="tag">Versatile</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image">✍️</div>
+                    <div class="portfolio-item-content">
+                        <h3 data-i18n="font_display_title">Display Fonts</h3>
+                        <p data-i18n="font_display_desc">Unique display typefaces for headlines and special applications</p>
+                        <div class="portfolio-item-tags">
+                            <span class="tag">Display</span>
+                            <span class="tag">Unique</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<footer class="footer">
-    <p>© 2025 DELBE — Portfolio</p>
-</footer>
+        <!-- Illustrations Section -->
+        <section id="illustrations">
+            <h2 data-i18n="section_illustrations">Illustrations</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image">🎨</div>
+                    <div class="portfolio-item-content">
+                        <h3 data-i18n="illus_digital_title">Digital Illustrations</h3>
+                        <p data-i18n="illus_digital_desc">Hand-crafted digital artwork for various applications</p>
+                        <div class="portfolio-item-tags">
+                            <span class="tag">Digital</span>
+                            <span class="tag">Creative</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image">🖌️</div>
+                    <div class="portfolio-item-content">
+                        <h3 data-i18n="illus_concept_title">Concept Art</h3>
+                        <p data-i18n="illus_concept_desc">Original concept art and visual storytelling</p>
+                        <div class="portfolio-item-tags">
+                            <span class="tag">Concept</span>
+                            <span class="tag">Art</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image">🌈</div>
+                    <div class="portfolio-item-content">
+                        <h3 data-i18n="illus_vector_title">Vector Illustrations</h3>
+                        <p data-i18n="illus_vector_desc">Scalable vector graphics for print and web</p>
+                        <div class="portfolio-item-tags">
+                            <span class="tag">Vector</span>
+                            <span class="tag">Scalable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<script src="theme.js"></script>
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 data-i18n="section_contact">Get In Touch</h2>
+            <p data-i18n="contact_intro">I'm always interested in hearing about new projects and opportunities.</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h4 data-i18n="contact_email_label">Email</h4>
+                    <a href="mailto:hello@ddelbe.com">hello@ddelbe.com</a>
+                </div>
+                <div class="contact-item">
+                    <h4 data-i18n="contact_location_label">Location</h4>
+                    <p data-i18n="contact_location_value">Creative City, Country</p>
+                </div>
+                <div class="contact-item">
+                    <h4 data-i18n="contact_social_label">Social Media</h4>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a> | 
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a> | 
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p data-i18n="footer_text">© 2026 ddelbe. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Translation Dictionary
+        const translations = {
+            en: {
+                // Navigation
+                nav_logo: 'Logo Design',
+                nav_print: 'Print Design',
+                nav_mascot: 'Mascot',
+                nav_font: 'Custom Font',
+                nav_illustrations: 'Illustrations',
+                nav_contact: 'Contact',
+                theme_toggle: '🌙 Dark Mode',
+                language_label: 'Language',
+                lang_english: 'English',
+                lang_spanish: 'Spanish',
+                lang_french: 'French',
+                
+                // Hero Section
+                hero_title: 'Creative Design Portfolio',
+                hero_subtitle: 'Bringing Ideas to Life Through Design',
+                cta_explore: 'Explore My Work',
+                
+                // Logo Section
+                section_logos: 'Logo Design',
+                logo_corp_title: 'Corporate Identity',
+                logo_corp_desc: 'Professional logos for businesses and startups with modern design principles',
+                logo_creative_title: 'Creative Marks',
+                logo_creative_desc: 'Unique and memorable logo designs that capture brand essence',
+                logo_modern_title: 'Modern Designs',
+                logo_modern_desc: 'Contemporary logo designs with minimal aesthetics',
+                
+                // Print Section
+                section_print: 'Print Design',
+                print_business_title: 'Business Cards',
+                print_business_desc: 'Professional business card designs that make a lasting impression',
+                print_stationery_title: 'Stationery Sets',
+                print_stationery_desc: 'Complete stationery designs including letterheads and envelopes',
+                print_packaging_title: 'Packaging Design',
+                print_packaging_desc: 'Eye-catching packaging designs for retail and promotional products',
+                
+                // Mascot Section
+                section_mascots: 'Mascot Design',
+                mascot_animal_title: 'Animal Mascots',
+                mascot_animal_desc: 'Playful and engaging animal character designs for brands',
+                mascot_custom_title: 'Custom Characters',
+                mascot_custom_desc: 'Original character designs tailored to brand identity',
+                mascot_emotional_title: 'Emotional Characters',
+                mascot_emotional_desc: 'Characters with diverse expressions for marketing campaigns',
+                
+                // Font Section
+                section_fonts: 'Custom Font Design',
+                font_serif_title: 'Serif Typefaces',
+                font_serif_desc: 'Elegant serif fonts suitable for premium brands and publications',
+                font_sans_title: 'Sans-Serif Fonts',
+                font_sans_desc: 'Modern sans-serif typefaces for digital and print applications',
+                font_display_title: 'Display Fonts',
+                font_display_desc: 'Unique display typefaces for headlines and special applications',
+                
+                // Illustrations Section
+                section_illustrations: 'Illustrations',
+                illus_digital_title: 'Digital Illustrations',
+                illus_digital_desc: 'Hand-crafted digital artwork for various applications',
+                illus_concept_title: 'Concept Art',
+                illus_concept_desc: 'Original concept art and visual storytelling',
+                illus_vector_title: 'Vector Illustrations',
+                illus_vector_desc: 'Scalable vector graphics for print and web',
+                
+                // Contact Section
+                section_contact: 'Get In Touch',
+                contact_intro: 'I\'m always interested in hearing about new projects and opportunities.',
+                contact_email_label: 'Email',
+                contact_location_label: 'Location',
+                contact_location_value: 'Creative City, Country',
+                contact_social_label: 'Social Media',
+                
+                // Footer
+                footer_text: '© 2026 ddelbe. All rights reserved.'
+            },
+            es: {
+                // Navigation
+                nav_logo: 'Diseño de Logos',
+                nav_print: 'Diseño Gráfico',
+                nav_mascot: 'Mascota',
+                nav_font: 'Tipografía Personalizada',
+                nav_illustrations: 'Ilustraciones',
+                nav_contact: 'Contacto',
+                theme_toggle: '🌙 Modo Oscuro',
+                language_label: 'Idioma',
+                lang_english: 'Inglés',
+                lang_spanish: 'Español',
+                lang_french: 'Francés',
+                
+                // Hero Section
+                hero_title: 'Portafolio de Diseño Creativo',
+                hero_subtitle: 'Dando Vida a las Ideas a Través del Diseño',
+                cta_explore: 'Explorar Mi Trabajo',
+                
+                // Logo Section
+                section_logos: 'Diseño de Logos',
+                logo_corp_title: 'Identidad Corporativa',
+                logo_corp_desc: 'Logos profesionales para empresas y startups con principios de diseño moderno',
+                logo_creative_title: 'Marcas Creativas',
+                logo_creative_desc: 'Diseños de logos únicos y memorables que capturan la esencia de la marca',
+                logo_modern_title: 'Diseños Modernos',
+                logo_modern_desc: 'Diseños de logos contemporáneos con estética minimalista',
+                
+                // Print Section
+                section_print: 'Diseño Gráfico',
+                print_business_title: 'Tarjetas de Negocio',
+                print_business_desc: 'Diseños profesionales de tarjetas de negocio que dejan una impresión duradera',
+                print_stationery_title: 'Juegos de Papelería',
+                print_stationery_desc: 'Diseños completos de papelería incluyendo membretes y sobres',
+                print_packaging_title: 'Diseño de Embalaje',
+                print_packaging_desc: 'Diseños de embalaje llamativos para productos de retail y promocionales',
+                
+                // Mascot Section
+                section_mascots: 'Diseño de Mascotas',
+                mascot_animal_title: 'Mascotas de Animales',
+                mascot_animal_desc: 'Diseños de personajes de animales juguerones y atractivos para marcas',
+                mascot_custom_title: 'Personajes Personalizados',
+                mascot_custom_desc: 'Diseños de personajes originales adaptados a la identidad de marca',
+                mascot_emotional_title: 'Personajes Emocionales',
+                mascot_emotional_desc: 'Personajes con diversas expresiones para campañas de marketing',
+                
+                // Font Section
+                section_fonts: 'Diseño de Tipografía Personalizada',
+                font_serif_title: 'Tipografías Serif',
+                font_serif_desc: 'Fuentes serif elegantes adecuadas para marcas premium y publicaciones',
+                font_sans_title: 'Tipografías Sans-Serif',
+                font_sans_desc: 'Tipografías sans-serif modernas para aplicaciones digitales e impresas',
+                font_display_title: 'Tipografías de Exhibición',
+                font_display_desc: 'Tipografías de exhibición únicas para títulos y aplicaciones especiales',
+                
+                // Illustrations Section
+                section_illustrations: 'Ilustraciones',
+                illus_digital_title: 'Ilustraciones Digitales',
+                illus_digital_desc: 'Obras de arte digitales artesanales para varias aplicaciones',
+                illus_concept_title: 'Arte Conceptual',
+                illus_concept_desc: 'Arte conceptual original y narración visual',
+                illus_vector_title: 'Ilustraciones Vectoriales',
+                illus_vector_desc: 'Gráficos vectoriales escalables para impresos y web',
+                
+                // Contact Section
+                section_contact: 'Ponte en Contacto',
+                contact_intro: 'Siempre me interesa escuchar sobre nuevos proyectos y oportunidades.',
+                contact_email_label: 'Correo Electrónico',
+                contact_location_label: 'Ubicación',
+                contact_location_value: 'Ciudad Creativa, País',
+                contact_social_label: 'Redes Sociales',
+                
+                // Footer
+                footer_text: '© 2026 ddelbe. Todos los derechos reservados.'
+            },
+            fr: {
+                // Navigation
+                nav_logo: 'Conception de Logos',
+                nav_print: 'Design Graphique',
+                nav_mascot: 'Mascotte',
+                nav_font: 'Police Personnalisée',
+                nav_illustrations: 'Illustrations',
+                nav_contact: 'Contact',
+                theme_toggle: '🌙 Mode Sombre',
+                language_label: 'Langue',
+                lang_english: 'Anglais',
+                lang_spanish: 'Espagnol',
+                lang_french: 'Français',
+                
+                // Hero Section
+                hero_title: 'Portfolio de Conception Créative',
+                hero_subtitle: 'Donner Vie aux Idées par le Design',
+                cta_explore: 'Explorer Mon Travail',
+                
+                // Logo Section
+                section_logos: 'Conception de Logos',
+                logo_corp_title: 'Identité Corporative',
+                logo_corp_desc: 'Logos professionnels pour les entreprises et startups selon les principes de design modernes',
+                logo_creative_title: 'Marques Créatives',
+                logo_creative_desc: 'Designs de logos uniques et mémorables qui capturent l\'essence de la marque',
+                logo_modern_title: 'Conceptions Modernes',
+                logo_modern_desc: 'Designs de logos contemporains avec une esthétique minimaliste',
+                
+                // Print Section
+                section_print: 'Design Graphique',
+                print_business_title: 'Cartes de Visite',
+                print_business_desc: 'Designs professionnels de cartes de visite qui laissent une impression durable',
+                print_stationery_title: 'Ensembles de Papeterie',
+                print_stationery_desc: 'Designs complets de papeterie incluant en-têtes et enveloppes',
+                print_packaging_title: 'Design d\'Emballage',
+                print_packaging_desc: 'Designs d\'emballage accrocheurs pour les produits de vente au détail et promotionnels',
+                
+                // Mascot Section
+                section_mascots: 'Conception de Mascottes',
+                mascot_animal_title: 'Mascottes Animales',
+                mascot_animal_desc: 'Designs de personnages animaux ludiques et engageants pour les marques',
+                mascot_custom_title: 'Personnages Personnalisés',
+                mascot_custom_desc: 'Designs de personnages originaux adaptés à l\'identité de marque',
+                mascot_emotional_title: 'Personnages Émotionnels',
+                mascot_emotional_desc: 'Personnages avec diverses expressions pour les campagnes marketing',
+                
+                // Font Section
+                section_fonts: 'Conception de Police Personnalisée',
+                font_serif_title: 'Polices Serif',
+                font_serif_desc: 'Polices serif élégantes adaptées aux marques premium et aux publications',
+                font_sans_title: 'Polices Sans-Serif',
+                font_sans_desc: 'Polices sans-serif modernes pour les applications numériques et imprimées',
+                font_display_title: 'Polices d\'Affichage',
+                font_display_desc: 'Polices d\'affichage uniques pour les titres et applications spéciales',
+                
+                // Illustrations Section
+                section_illustrations: 'Illustrations',
+                illus_digital_title: 'Illustrations Numériques',
+                illus_digital_desc: 'Œuvres d\'art numérique artisanales pour diverses applications',
+                illus_concept_title: 'Art Conceptuel',
+                illus_concept_desc: 'Art conceptuel original et narration visuelle',
+                illus_vector_title: 'Illustrations Vectorielles',
+                illus_vector_desc: 'Graphiques vectoriels évolutifs pour impression et web',
+                
+                // Contact Section
+                section_contact: 'Restez en Contact',
+                contact_intro: 'Je suis toujours intéressé par les nouveaux projets et les opportunités.',
+                contact_email_label: 'Email',
+                contact_location_label: 'Localisation',
+                contact_location_value: 'Ville Créative, Pays',
+                contact_social_label: 'Réseaux Sociaux',
+                
+                // Footer
+                footer_text: '© 2026 ddelbe. Tous droits réservés.'
+            }
+        };
+
+        // Initialize language and theme
+        let currentLanguage = localStorage.getItem('language') || 'en';
+        let isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+        // Set initial theme
+        if (isDarkMode) {
+            document.body.classList.add('dark-mode');
+            document.getElementById('themeToggle').textContent = '☀️ Light Mode';
+        }
+
+        // Set initial language
+        document.getElementById('languageSelect').value = currentLanguage;
+        updatePageLanguage(currentLanguage);
+
+        // Theme Toggle
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            isDarkMode = !isDarkMode;
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+            
+            if (isDarkMode) {
+                this.textContent = '☀️ ' + getTranslation('Light Mode', currentLanguage);
+            } else {
+                this.textContent = '🌙 ' + getTranslation('Dark Mode', currentLanguage);
+            }
+        });
+
+        // Language Selector
+        document.getElementById('languageSelect').addEventListener('change', function(e) {
+            currentLanguage = e.target.value;
+            localStorage.setItem('language', currentLanguage);
+            updatePageLanguage(currentLanguage);
+        });
+
+        // Update page language
+        function updatePageLanguage(lang) {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'BUTTON' || element.tagName === 'SELECT') {
+                        if (element.tagName === 'SELECT') {
+                            element.title = translations[lang][key];
+                        } else {
+                            element.textContent = translations[lang][key];
+                        }
+                    } else {
+                        element.textContent = translations[lang][key];
+                    }
+                }
+            });
+
+            // Update language selector options
+            const langOptions = {
+                'en': translations[lang].lang_english,
+                'es': translations[lang].lang_spanish,
+                'fr': translations[lang].lang_french
+            };
+            
+            const options = document.getElementById('languageSelect').options;
+            options[0].textContent = langOptions.en;
+            options[1].textContent = langOptions.es;
+            options[2].textContent = langOptions.fr;
+
+            // Update theme toggle text
+            const themeToggle = document.getElementById('themeToggle');
+            if (isDarkMode) {
+                themeToggle.textContent = '☀️ Light Mode';
+            } else {
+                themeToggle.textContent = '🌙 ' + getTranslation('Dark Mode', lang);
+            }
+        }
+
+        // Helper function to get translation
+        function getTranslation(text, lang) {
+            // Find key by value
+            for (let key in translations[lang]) {
+                if (translations[lang][key] === text) {
+                    return text;
+                }
+            }
+            return text;
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // CTA Button functionality
+        document.querySelector('.cta-button').addEventListener('click', function() {
+            document.getElementById('logo').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,36 @@
+title: Portfolio
+description: A portfolio website built with Jekyll and GitHub Pages
+url: https://ddelbe.github.io
+baseurl: /portfolio
+
+# Theme
+theme: jekyll-theme-minimal
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# SEO and Social
+author: ddelbe
+social:
+  name: ddelbe
+  links:
+    - https://github.com/ddelbe
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+# Exclude files from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .git
+  - .gitignore

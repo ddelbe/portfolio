@@ -4,327 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - ddelbe</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #e74c3c;
-            --light-bg: #ecf0f1;
-            --dark-bg: #1a1a1a;
-            --text-light: #2c3e50;
-            --text-dark: #ecf0f1;
-            --border: #bdc3c7;
-            --success: #27ae60;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--light-bg);
-            color: var(--text-light);
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        body.dark-mode {
-            background-color: var(--dark-bg);
-            color: var(--text-dark);
-        }
-
-        /* Header and Navigation */
-        header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        body.dark-mode header {
-            background: linear-gradient(135deg, #0f0f0f 0%, #1a3a52 100%);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-
-        .nav-controls {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-menu a {
-            color: white;
-            text-decoration: none;
-            transition: opacity 0.3s ease;
-            font-weight: 500;
-        }
-
-        .nav-menu a:hover {
-            opacity: 0.8;
-        }
-
-        .control-buttons {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .btn-control {
-            background: rgba(255, 255, 255, 0.2);
-            border: 2px solid white;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        .btn-control:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-
-        /* Main Container */
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 4rem 2rem;
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
-            border-radius: 10px;
-            color: white;
-            margin-bottom: 3rem;
-        }
-
-        body.dark-mode .hero {
-            background: linear-gradient(135deg, #1a3a52 0%, #8b3a2f 100%);
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-        }
-
-        .cta-button {
-            background: white;
-            color: var(--primary);
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Section Styling */
-        section {
-            margin-bottom: 3rem;
-        }
-
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-            border-bottom: 3px solid var(--secondary);
-            padding-bottom: 0.5rem;
-        }
-
-        body.dark-mode section h2 {
-            color: var(--text-dark);
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .portfolio-item {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        body.dark-mode .portfolio-item {
-            background: #2a2a2a;
-        }
-
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .portfolio-item-image {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, var(--secondary), var(--accent));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3rem;
-        }
-
-        .portfolio-item-content {
-            padding: 1.5rem;
-        }
-
-        .portfolio-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-        }
-
-        body.dark-mode .portfolio-item h3 {
-            color: var(--secondary);
-        }
-
-        .portfolio-item p {
-            color: #666;
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-
-        body.dark-mode .portfolio-item p {
-            color: #aaa;
-        }
-
-        .portfolio-item-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .tag {
-            background: var(--secondary);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background: var(--secondary);
-            color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        body.dark-mode .contact-section {
-            background: #1a3a52;
-        }
-
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .contact-item {
-            padding: 1rem;
-        }
-
-        .contact-item h4 {
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-item a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .contact-item a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-
-        body.dark-mode footer {
-            background: #0f0f0f;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .nav-menu {
-                gap: 1rem;
-                font-size: 0.9rem;
-            }
-
-            nav {
-                flex-wrap: wrap;
-                gap: 1rem;
-            }
-
-            .control-buttons {
-                order: 3;
-                width: 100%;
-                justify-content: center;
-            }
-        }
-    </style>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+     <link rel="stylesheet" href="styles2.css" />
 </head>
+
 <body>
     <header>
         <nav>
-            <a href="#" class="logo">ddelbe</a>
+            <a href="#" class="logo">Dewi Delbe</a>
             <ul class="nav-menu">
                 <li><a href="#logo" data-i18n="nav_logo">Logo Design</a></li>
                 <li><a href="#print" data-i18n="nav_print">Print Design</a></li>
@@ -350,45 +37,33 @@
             <h1 data-i18n="hero_title">Creative Design Portfolio</h1>
             <p data-i18n="hero_subtitle">Bringing Ideas to Life Through Design</p>
             <button class="cta-button" data-i18n="cta_explore">Explore My Work</button>
-        </section>
+        
 
         <!-- Logo Design Section -->
         <section id="logo">
             <h2 data-i18n="section_logos">Logo Design</h2>
             <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-item-image">🏢</div>
-                    <div class="portfolio-item-content">
+                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
+                    <div class="portfolio-item-image"><img src="visuals/logo/skyrunner.webp" alt="Skyrunner Logo" width="500" height="600"></div>
+                    <!-- <div class="portfolio-item-content">
                         <h3 data-i18n="logo_corp_title">Corporate Identity</h3>
                         <p data-i18n="logo_corp_desc">Professional logos for businesses and startups with modern design principles</p>
-                        <div class="portfolio-item-tags">
-                            <span class="tag">Branding</span>
-                            <span class="tag">Vector</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-item-image">🎨</div>
-                    <div class="portfolio-item-content">
+                    </div> -->
+                </div></div>
+                  <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
+                    <div class="portfolio-item-image"><img src="visuals/logo/vitraux.webp" alt="Vitraux Logo" width="500" height="600"></div>
+                    <!-- <div class="portfolio-item-content">
                         <h3 data-i18n="logo_creative_title">Creative Marks</h3>
                         <p data-i18n="logo_creative_desc">Unique and memorable logo designs that capture brand essence</p>
-                        <div class="portfolio-item-tags">
-                            <span class="tag">Creative</span>
-                            <span class="tag">Symbolic</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-item-image">✨</div>
-                    <div class="portfolio-item-content">
+                    </div> -->
+                </div></div>
+                  <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
+                    <div class="portfolio-item-image"><img src="visuals/logo/metallurgy.webp" alt="Metallurgy Logo" width="500" height="600"></div>
+                    <!-- <div class="portfolio-item-content">
                         <h3 data-i18n="logo_modern_title">Modern Designs</h3>
                         <p data-i18n="logo_modern_desc">Contemporary logo designs with minimal aesthetics</p>
-                        <div class="portfolio-item-tags">
-                            <span class="tag">Minimal</span>
-                            <span class="tag">Modern</span>
-                        </div>
-                    </div>
-                </div>
+                    </div> -->
+                </div></div>
             </div>
         </section>
 
@@ -396,39 +71,27 @@
         <section id="print">
             <h2 data-i18n="section_print">Print Design</h2>
             <div class="portfolio-grid">
-                <div class="portfolio-item">
+                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
                     <div class="portfolio-item-image">📇</div>
-                    <div class="portfolio-item-content">
+                    <!-- <div class="portfolio-item-content">
                         <h3 data-i18n="print_business_title">Business Cards</h3>
                         <p data-i18n="print_business_desc">Professional business card designs that make a lasting impression</p>
-                        <div class="portfolio-item-tags">
-                            <span class="tag">Print</span>
-                            <span class="tag">Professional</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
+                    </div> -->
+                </div></div>
+                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
                     <div class="portfolio-item-image">📄</div>
-                    <div class="portfolio-item-content">
+                    <!-- <div class="portfolio-item-content">
                         <h3 data-i18n="print_stationery_title">Stationery Sets</h3>
                         <p data-i18n="print_stationery_desc">Complete stationery designs including letterheads and envelopes</p>
-                        <div class="portfolio-item-tags">
-                            <span class="tag">Stationery</span>
-                            <span class="tag">Branding</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
+                    </div> -->
+                </div></div>
+              <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
                     <div class="portfolio-item-image">🎁</div>
-                    <div class="portfolio-item-content">
+                    <!-- <div class="portfolio-item-content">
                         <h3 data-i18n="print_packaging_title">Packaging Design</h3>
                         <p data-i18n="print_packaging_desc">Eye-catching packaging designs for retail and promotional products</p>
-                        <div class="portfolio-item-tags">
-                            <span class="tag">Packaging</span>
-                            <span class="tag">Retail</span>
-                        </div>
-                    </div>
-                </div>
+                    </div> -->
+                </div></div>
             </div>
         </section>
 
@@ -436,39 +99,20 @@
         <section id="mascot">
             <h2 data-i18n="section_mascots">Mascot Design</h2>
             <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-item-image">🦁</div>
-                    <div class="portfolio-item-content">
+                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
+                    <div class="portfolio-item-image"><img src="visuals/mascot1.webp" alt= "Mascot 1" width="500" height="600"></div>
+                    <!-- <div class="portfolio-item-content">
                         <h3 data-i18n="mascot_animal_title">Animal Mascots</h3>
                         <p data-i18n="mascot_animal_desc">Playful and engaging animal character designs for brands</p>
-                        <div class="portfolio-item-tags">
-                            <span class="tag">Characters</span>
-                            <span class="tag">Fun</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-item-image">👽</div>
-                    <div class="portfolio-item-content">
+                    </div> -->
+                </div></div>
+                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
+                    <div class="portfolio-item-image"><img src="visuals/mascot2.webp" alt="Mascot 2" width="500" height="600"></div>
+                    <!-- <div class="portfolio-item-content">
                         <h3 data-i18n="mascot_custom_title">Custom Characters</h3>
                         <p data-i18n="mascot_custom_desc">Original character designs tailored to brand identity</p>
-                        <div class="portfolio-item-tags">
-                            <span class="tag">Custom</span>
-                            <span class="tag">Original</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-item-image">🎭</div>
-                    <div class="portfolio-item-content">
-                        <h3 data-i18n="mascot_emotional_title">Emotional Characters</h3>
-                        <p data-i18n="mascot_emotional_desc">Characters with diverse expressions for marketing campaigns</p>
-                        <div class="portfolio-item-tags">
-                            <span class="tag">Expression</span>
-                            <span class="tag">Marketing</span>
-                        </div>
-                    </div>
-                </div>
+                    </div> -->
+                </div></div>
             </div>
         </section>
 
@@ -478,37 +122,10 @@
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <div class="portfolio-item-image">🔤</div>
-                    <div class="portfolio-item-content">
+                    <!-- <div class="portfolio-item-content">
                         <h3 data-i18n="font_serif_title">Serif Typefaces</h3>
                         <p data-i18n="font_serif_desc">Elegant serif fonts suitable for premium brands and publications</p>
-                        <div class="portfolio-item-tags">
-                            <span class="tag">Typography</span>
-                            <span class="tag">Elegant</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-item-image">🔡</div>
-                    <div class="portfolio-item-content">
-                        <h3 data-i18n="font_sans_title">Sans-Serif Fonts</h3>
-                        <p data-i18n="font_sans_desc">Modern sans-serif typefaces for digital and print applications</p>
-                        <div class="portfolio-item-tags">
-                            <span class="tag">Modern</span>
-                            <span class="tag">Versatile</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-item-image">✍️</div>
-                    <div class="portfolio-item-content">
-                        <h3 data-i18n="font_display_title">Display Fonts</h3>
-                        <p data-i18n="font_display_desc">Unique display typefaces for headlines and special applications</p>
-                        <div class="portfolio-item-tags">
-                            <span class="tag">Display</span>
-                            <span class="tag">Unique</span>
-                        </div>
-                    </div>
-                </div>
+                    </div> -->
             </div>
         </section>
 
@@ -516,40 +133,36 @@
         <section id="illustrations">
             <h2 data-i18n="section_illustrations">Illustrations</h2>
             <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-item-image">🎨</div>
-                    <div class="portfolio-item-content">
+                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
+                    <div class="portfolio-item-image"><img src="visuals/illust/AuroreBirthday2022.webp" alt="Illust 1" width="500" height="600"></div>
+                    <!-- <div class="portfolio-item-content">
                         <h3 data-i18n="illus_digital_title">Digital Illustrations</h3>
                         <p data-i18n="illus_digital_desc">Hand-crafted digital artwork for various applications</p>
-                        <div class="portfolio-item-tags">
-                            <span class="tag">Digital</span>
-                            <span class="tag">Creative</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-item-image">🖌️</div>
-                    <div class="portfolio-item-content">
+                    </div> -->
+                </div></div>
+                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
+                    <div class="portfolio-item-image"><img src="visuals/illust/CareImposing2-WPver.webp" alt="Illust 2" width="500" height="600"></div>
+                    <!-- <div class="portfolio-item-content">
                         <h3 data-i18n="illus_concept_title">Concept Art</h3>
                         <p data-i18n="illus_concept_desc">Original concept art and visual storytelling</p>
-                        <div class="portfolio-item-tags">
-                            <span class="tag">Concept</span>
-                            <span class="tag">Art</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-item-image">🌈</div>
-                    <div class="portfolio-item-content">
+                    </div> -->
+                </div></div>
+                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
+                    <div class="portfolio-item-image"><img src="visuals/illust/flowers.webp" alt="Illust 3" width="500" height="600"></div>
+                    <!-- <div class="portfolio-item-content">
                         <h3 data-i18n="illus_vector_title">Vector Illustrations</h3>
                         <p data-i18n="illus_vector_desc">Scalable vector graphics for print and web</p>
-                        <div class="portfolio-item-tags">
-                            <span class="tag">Vector</span>
-                            <span class="tag">Scalable</span>
-                        </div>
-                    </div>
-                </div>
+                    </div> -->
+                </div></div>
+                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
+                    <div class="portfolio-item-image"><img src="visuals/illust/YoungMorgana.webp" alt="Illust 4" width="500" height="600"></div>
+                    <!-- <div class="portfolio-item-content">
+                        <h3 data-i18n="illus_vector_title">Vector Illustrations</h3>
+                        <p data-i18n="illus_vector_desc">Scalable vector graphics for print and web</p>
+                    </div> -->
+                </div></div>
             </div>
+        </section>
         </section>
 
         <!-- Contact Section -->
@@ -559,7 +172,7 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <h4 data-i18n="contact_email_label">Email</h4>
-                    <a href="mailto:hello@ddelbe.com">hello@ddelbe.com</a>
+                    <a href="mailto:dewi.delbe@hotmail.fr">dewi.delbe@hotmail.fr</a>
                 </div>
                 <div class="contact-item">
                     <h4 data-i18n="contact_location_label">Location</h4>
@@ -576,7 +189,7 @@
     </main>
 
     <footer>
-        <p data-i18n="footer_text">© 2026 ddelbe. All rights reserved.</p>
+        <p data-i18n="footer_text">© 2026 Dewi Delbe. All rights reserved.</p>
     </footer>
 
     <script>
@@ -655,7 +268,7 @@
                 contact_social_label: 'Social Media',
                 
                 // Footer
-                footer_text: '© 2026 ddelbe. All rights reserved.'
+                footer_text: '© 2026 Dewi Delbe. All rights reserved.'
             },
             es: {
                 // Navigation
@@ -730,7 +343,7 @@
                 contact_social_label: 'Redes Sociales',
                 
                 // Footer
-                footer_text: '© 2026 ddelbe. Todos los derechos reservados.'
+                footer_text: '© 2026 Dewi Delbe. Todos los derechos reservados.'
             },
             fr: {
                 // Navigation
@@ -805,7 +418,7 @@
                 contact_social_label: 'Réseaux Sociaux',
                 
                 // Footer
-                footer_text: '© 2026 ddelbe. Tous droits réservés.'
+                footer_text: '© 2026 Dewi Delbe. Tous droits réservés.'
             }
         };
 

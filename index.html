@@ -4,66 +4,309 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - ddelbe</title>
-    <!-- <link rel="stylesheet" href="styles.css" /> -->
      <link rel="stylesheet" href="styles2.css" />
 </head>
 
-<body>
+<svg width="0" height="0">
+  <defs>
+    <symbol id="star-shape" viewBox="0 0 1920 3240">
+        <path d="M1149.32,758.09 C1148.71,758.12 1140.88,754.17 1140.53,753.91 C1138.94,752.67 1138.15,750.91 1138.18,748.92 C1138.19,748.60 1137.48,701.88 1137.37,683.64 C1137.20,676.67 1136.46,655.67 1135.74,650.14 C1135.64,649.38 1128.98,609.17 1126.53,593.46 C1124.98,583.78 1123.12,574.93 1120.85,566.59 C1118.54,558.35 1116.14,551.53 1114.53,548.16 C1113.41,545.86 1108.44,541.26 1106.88,540.64 C1105.81,540.22 1101.17,539.34 1100.85,539.23 C1100.57,539.13 1093.76,535.98 1090.48,535.04 C1083.66,533.20 1067.23,529.81 1064.59,529.25 C1061.22,528.54 1052.54,527.35 1050.58,526.96 C1048.69,526.59 1043.99,524.65 1040.44,524.38 C1034.06,523.89 1030.02,522.57 1029.45,522.54 C1024.02,522.18 1019.71,521.05 1017.36,521.17 C1010.94,521.48 1006.19,521.01 1002.33,519.73 C1000.19,519.15 909.82,517.22 909.43,517.24 C907.39,517.28 905.76,516.75 904.18,515.49 C903.57,514.98 900.94,511.92 900.85,511.77 C899.84,510.15 899.24,507.58 899.18,505.36 C899.36,501.40 900.12,498.55 902.54,495.82 C903.10,495.23 905.74,492.79 907.01,492.38 C907.48,492.23 997.43,490.43 999.42,490.26 C1001.51,490.08 1008.17,488.09 1012.65,488.20 C1015.04,488.26 1020.03,488.51 1020.67,488.40 C1021.64,488.23 1024.09,487.34 1025.99,487.23 C1031.46,486.86 1035.46,485.48 1036.56,485.42 C1038.53,485.30 1042.52,485.00 1043.51,484.81 C1044.83,484.54 1049.42,482.68 1054.03,481.98 C1069.56,479.81 1090.78,474.47 1093.28,473.64 C1096.89,472.43 1100.85,470.25 1103.71,469.72 C1105.81,469.32 1107.79,468.53 1109.12,467.58 C1111.57,465.72 1114.09,462.61 1115.99,458.25 C1117.62,454.40 1122.59,436.58 1123.39,433.15 C1124.81,427.03 1130.70,389.61 1133.16,374.12 C1134.22,368.17 1136.25,356.74 1136.77,345.98 C1137.51,324.13 1138.22,258.54 1138.31,258.25 C1138.85,256.71 1145.63,251.85 1146.14,251.70 C1146.58,251.58 1147.61,251.49 1149.22,251.45 C1151.72,251.52 1152.93,251.85 1154.33,253.02 C1155.40,253.92 1157.93,255.40 1158.60,255.98 C1159.81,257.08 1160.34,258.59 1160.33,260.61 C1160.32,260.93 1160.98,307.63 1161.13,325.88 C1161.32,332.86 1162.10,353.87 1162.81,359.40 C1162.92,360.19 1169.56,400.37 1172.01,416.08 C1173.56,425.76 1175.42,434.61 1177.69,442.95 C1179.99,451.19 1182.40,458.01 1184.00,461.37 C1185.12,463.68 1190.10,468.28 1191.66,468.90 C1192.72,469.32 1197.37,470.20 1197.69,470.31 C1197.97,470.41 1204.78,473.56 1208.06,474.50 C1214.88,476.34 1231.31,479.73 1233.95,480.29 C1237.32,480.99 1246.00,482.19 1247.96,482.58 C1249.85,482.95 1254.55,484.89 1258.09,485.16 C1264.48,485.65 1268.51,486.96 1269.09,487.00 C1274.52,487.36 1278.82,488.49 1281.18,488.37 C1287.60,488.05 1292.34,488.53 1296.21,489.81 C1298.35,490.39 1388.72,492.31 1389.11,492.30 C1391.15,492.26 1392.80,492.79 1394.35,494.04 C1396.50,495.86 1399.24,500.34 1399.30,503.46 C1399.30,503.90 1399.32,504.54 1399.36,505.36 C1399.29,507.58 1398.70,510.15 1397.69,511.77 C1397.60,511.92 1394.97,514.98 1394.35,515.49 C1392.78,516.75 1391.15,517.28 1389.11,517.24 C1388.72,517.22 1298.24,519.18 1296.21,519.73 C1292.34,521.01 1287.60,521.48 1281.18,521.17 C1278.82,521.05 1274.52,522.18 1269.09,522.54 C1268.51,522.57 1264.48,523.89 1258.09,524.38 C1254.55,524.65 1249.85,526.59 1247.96,526.96 C1225.03,530.71 1214.88,533.20 1208.06,535.04 C1204.78,535.98 1197.97,539.13 1197.69,539.23 C1197.37,539.34 1192.72,540.22 1191.66,540.64 C1190.10,541.26 1185.12,545.86 1184.00,548.16 C1181.67,553.06 1177.71,566.13 1175.88,573.35 C1173.99,580.85 1162.50,651.90 1162.07,658.26 C1161.13,672.40 1160.32,748.61 1160.33,748.93 C1160.34,750.95 1159.81,752.46 1158.60,753.55 C1157.94,754.14 1155.35,755.65 1154.31,756.52 C1152.88,757.69 1150.35,758.00 1149.32,758.09 Z" 
+        fill="currentColor" stroke="currentColor" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+        <path class="bbc" d="M1149.32,758.09 C1148.71,758.12 1140.88,754.17 1140.53,753.91 C1138.94,752.67 1138.15,750.91 1138.18,748.92 C1138.19,748.60 1137.48,701.88 1137.37,683.64 C1137.20,676.67 1136.46,655.67 1135.74,650.14 C1135.64,649.38 1128.98,609.17 1126.53,593.46 C1124.98,583.78 1123.12,574.93 1120.85,566.59 C1118.54,558.35 1116.14,551.53 1114.53,548.16 C1113.41,545.86 1108.44,541.26 1106.88,540.64 C1105.81,540.22 1101.17,539.34 1100.85,539.23 C1100.57,539.13 1093.76,535.98 1090.48,535.04 C1083.66,533.20 1067.23,529.81 1064.59,529.25 C1061.22,528.54 1052.54,527.35 1050.58,526.96 C1048.69,526.59 1043.99,524.65 1040.44,524.38 C1034.06,523.89 1030.02,522.57 1029.45,522.54 C1024.02,522.18 1019.71,521.05 1017.36,521.17 C1010.94,521.48 1006.19,521.01 1002.33,519.73 C1000.19,519.15 909.82,517.22 909.43,517.24 C907.39,517.28 905.76,516.75 904.18,515.49 C903.57,514.98 900.94,511.92 900.85,511.77 C899.84,510.15 899.24,507.58 899.18,505.36 C899.36,501.40 900.12,498.55 902.54,495.82 C903.10,495.23 905.74,492.79 907.01,492.38 C907.48,492.23 997.43,490.43 999.42,490.26 C1001.51,490.08 1008.17,488.09 1012.65,488.20 C1015.04,488.26 1020.03,488.51 1020.67,488.40 C1021.64,488.23 1024.09,487.34 1025.99,487.23 C1031.46,486.86 1035.46,485.48 1036.56,485.42 C1038.53,485.30 1042.52,485.00 1043.51,484.81 C1044.83,484.54 1049.42,482.68 1054.03,481.98 C1069.56,479.81 1090.78,474.47 1093.28,473.64 C1096.89,472.43 1100.85,470.25 1103.71,469.72 C1105.81,469.32 1107.79,468.53 1109.12,467.58 C1111.57,465.72 1114.09,462.61 1115.99,458.25 C1117.62,454.40 1122.59,436.58 1123.39,433.15 C1124.81,427.03 1130.70,389.61 1133.16,374.12 C1134.22,368.17 1136.25,356.74 1136.77,345.98 C1137.51,324.13 1138.22,258.54 1138.31,258.25 C1138.85,256.71 1145.63,251.85 1146.14,251.70 C1146.58,251.58 1147.61,251.49 1149.22,251.45 C1151.72,251.52 1152.93,251.85 1154.33,253.02 C1155.40,253.92 1157.93,255.40 1158.60,255.98 C1159.81,257.08 1160.34,258.59 1160.33,260.61 C1160.32,260.93 1160.98,307.63 1161.13,325.88 C1161.32,332.86 1162.10,353.87 1162.81,359.40 C1162.92,360.19 1169.56,400.37 1172.01,416.08 C1173.56,425.76 1175.42,434.61 1177.69,442.95 C1179.99,451.19 1182.40,458.01 1184.00,461.37 C1185.12,463.68 1190.10,468.28 1191.66,468.90 C1192.72,469.32 1197.37,470.20 1197.69,470.31 C1197.97,470.41 1204.78,473.56 1208.06,474.50 C1214.88,476.34 1231.31,479.73 1233.95,480.29 C1237.32,480.99 1246.00,482.19 1247.96,482.58 C1249.85,482.95 1254.55,484.89 1258.09,485.16 C1264.48,485.65 1268.51,486.96 1269.09,487.00 C1274.52,487.36 1278.82,488.49 1281.18,488.37 C1287.60,488.05 1292.34,488.53 1296.21,489.81 C1298.35,490.39 1388.72,492.31 1389.11,492.30 C1391.15,492.26 1392.80,492.79 1394.35,494.04 C1396.50,495.86 1399.24,500.34 1399.30,503.46 C1399.30,503.90 1399.32,504.54 1399.36,505.36 C1399.29,507.58 1398.70,510.15 1397.69,511.77 C1397.60,511.92 1394.97,514.98 1394.35,515.49 C1392.78,516.75 1391.15,517.28 1389.11,517.24 C1388.72,517.22 1298.24,519.18 1296.21,519.73 C1292.34,521.01 1287.60,521.48 1281.18,521.17 C1278.82,521.05 1274.52,522.18 1269.09,522.54 C1268.51,522.57 1264.48,523.89 1258.09,524.38 C1254.55,524.65 1249.85,526.59 1247.96,526.96 C1225.03,530.71 1214.88,533.20 1208.06,535.04 C1204.78,535.98 1197.97,539.13 1197.69,539.23 C1197.37,539.34 1192.72,540.22 1191.66,540.64 C1190.10,541.26 1185.12,545.86 1184.00,548.16 C1181.67,553.06 1177.71,566.13 1175.88,573.35 C1173.99,580.85 1162.50,651.90 1162.07,658.26 C1161.13,672.40 1160.32,748.61 1160.33,748.93 C1160.34,750.95 1159.81,752.46 1158.60,753.55 C1157.94,754.14 1155.35,755.65 1154.31,756.52 C1152.88,757.69 1150.35,758.00 1149.32,758.09 Z" 
+        fill="currentColor" stroke="currentColor" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="arrow-shape" viewBox="0 0 129 53">
+        <path
+            d="
+            M0.66,1.97
+            C1.09,1.63 4.30,0.33 4.88,0.28
+            C6.24,0.21 11.16,3.90 13.30,5.54
+            C26.95,16.08 63.21,44.33 63.39,44.42
+            C64.09,44.75 66.87,42.52 71.46,38.92
+            C86.20,27.54 118.86,2.56 119.16,2.31
+            C120.85,0.95 123.56,-0.35 124.91,0.00
+            C126.39,0.43 128.08,3.92 127.63,5.07
+            C127.30,5.82 66.28,52.37 66.21,52.41
+            C66.03,52.49 64.17,52.48 62.36,52.59
+            C61.37,52.62 55.89,48.39 54.69,47.47
+            C40.82,36.79 3.17,7.57 2.85,7.34
+            C1.16,6.10 0.14,4.76 0.00,3.48
+            C-0.04,2.89 0.18,2.39 0.66,1.97
+            Z
+            "
+            fill="currentColor"
+            stroke="currentColor"
+            stroke-width="1"
+            stroke-linejoin="round"
+        />
+    </symbol>
+  </defs>
+</svg>
+<svg width="0" height="0" style="position:absolute">
+    <defs>
+        <symbol id="lightTico" viewBox="1745 47 120 120">
+            <path d="M1801.65,153.40 C1798.29,153.39 1790.31,152.09 1786.55,150.95 C1782.92,149.81 1776.09,146.20 1772.99,143.99 C1769.52,141.46 1764.76,136.72 1762.22,133.24 C1759.97,130.10 1756.41,123.31 1755.33,119.68 C1754.28,116.05 1753.10,107.88 1753.08,104.58 C1753.10,101.28 1754.28,93.10 1755.33,89.47 C1756.41,85.84 1759.97,79.04 1762.22,75.90 C1764.76,72.43 1769.52,67.68 1772.99,65.16 C1776.09,62.95 1782.92,59.34 1786.55,58.20 C1790.31,57.06 1798.29,55.76 1801.65,55.75 C1805.01,55.76 1813.00,57.06 1816.76,58.20 C1820.39,59.34 1827.23,62.95 1830.32,65.16 C1833.80,67.68 1838.55,72.43 1841.07,75.90 C1843.28,79.00 1846.89,85.84 1848.03,89.47 C1849.17,93.22 1850.47,101.21 1850.48,104.57 C1850.47,107.93 1849.17,115.92 1848.03,119.68 C1846.89,123.31 1843.28,130.15 1841.07,133.24 C1838.55,136.71 1833.80,141.46 1830.32,143.99 C1827.23,146.20 1820.39,149.81 1816.76,150.95 C1813.00,152.09 1805.01,153.39 1801.65,153.40 Z" 
+            fill="none" stroke="currentColor" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+            <path d="M1805.57,55.58 L1823.75,79.00 L1834.55,68.76 L1840.63,75.45 L1831.00,85.50 L1850.29,100.81 L1850.41,109.16 L1831.00,123.50 L1840.80,132.67 L1834.26,140.06 L1823.75,130.00 L1806.76,153.72 L1796.57,153.36 L1779.00,130.00 L1768.18,139.80 L1761.71,132.22 L1771.75,123.50 L1753.82,108.61 L1753.51,100.65 L1771.75,85.50 L1762.10,75.90 L1768.56,69.09 L1779.00,79.00 L1797.52,55.35 L1805.57,55.58 Z" 
+            fill="none" stroke="currentColor" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+            <path d="M1813.90,106.02 L1801.00,119.19 L1788.60,106.88 L1801.68,93.80 L1813.90,106.02 Z" 
+            fill="gold" stroke="currentColor" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+        </symbol>
+        <symbol id="darkTico" viewBox="1750 50 120 120">
+            <path d="M1790.88,106.68 L1801.21,96.41 L1811.55,106.68 L1801.21,116.94 L1790.88,106.68 Z" 
+            fill="grey" stroke="currentColor" stroke-width="5.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+            <path d="M1827.56,139.73 L1830.80,136.52 L1835.89,131.43 L1843.46,120.64 L1845.91,111.30 L1846.73,103.79 L1846.62,92.30 L1842.91,82.85 L1839.48,75.23 L1838.93,84.52 L1833.84,107.94 L1822.80,123.94 L1811.16,131.73 L1791.83,136.04 L1768.24,131.81 L1759.84,128.36 L1765.18,134.86 L1772.50,141.89 L1783.08,146.37 L1790.33,148.48 L1799.90,149.78 L1812.76,146.90 L1822.56,142.96 L1827.56,139.73 Z" 
+            fill="grey" stroke="currentColor" stroke-width="5.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+        </symbol>
+    </defs>
+</svg>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <g id="dashstar-shape">
+        <path d="m 110.37374,903.12099 c 2.34055,-0.0589 13.82516,-9.03593 16.41516,-10.86593 2.9,-2.04 17.1111,-13.28506 26.0711,-21.27506 5.84,-5.23 17.3,-15.75 22.92,-21.03 0.13,-0.12 5.19,-3.8 8.84,-7.65 0.42,-0.45 4.18,-2.99 5.3,-3.05 1,-0.03 2.44,2.9 2.49,4.04 -0.02,0.82 -11.49,15.86 -12.24,16.72 -6.99,7.91 -14.66,17.44 -18.19,21.77 -5.32,6.59 -30.32,41.11 -30.58,41.76 -0.08,0.26 18.1,27.2 22.61,33.75 2.95,4.14 12.16,15.47 14,17.36 4.77,4.92 22.08,26.05 23.1,27.05 2.15,2.18 0.99,6.07 0.17,6.46 -1.66,0.12 -4.03,0.09 -4.92,-0.25 -0.89,-0.34 -15.62,-15.28 -19.46,-18.23 -2.44,-1.96 -18.72,-16.39 -22.17,-19.2 -16.92962,-13.44945 -32.67608,-24.83334 -34.73,-25.23 -0.46,-0.31 -31.78,22.61 -38.19,28 -19.67,17.08 -30.27,25.59 -35.96,32.96 -1.35,1.71 -4.67,2.21 -6.35,2.35 -1.59,-0.73 -2.59,-2.89 -2.05,-5.08 0.12,-0.46 6.14,-6.9 8.25,-9.38 2.13,-2.52 12.32,-15.48 18.33,-21.66 5.58,-5.79 33.16,-46.47 34.3,-48.04 0.35,-0.61 -0.71,-2 -3.97,-6.56 -5.04,-6.95 -24.87,-34.71 -33.86,-44.85 -1.72,-1.94 -3.16,-4.54 -3.85,-5.49 -0.1,-0.12 -8.16,-8.88 -9.08,-10.01 -1.08,-1.32 -3.89,-5.29 -7.51,-10.02 -1.95,-2.55 -2.96,-4.45 -2.04,-6.35 0.63,-1.27 1.27,-1.89 1.94,-1.87 1.12,0.06 4.88,2.6 5.3,3.05 3.64,3.84 7.38,6.25 8.88,7.74 12.86,12.63 29.57,27.23 32.91,29.75 6.57,4.84 18.130218,13.02549 20.550218,14.98549 2.149887,1.5922 10.499012,8.09429 12.773522,8.3455 z" 
+        fill="white" stroke="#FFFF74" stroke-width="28.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+        <path d="m 110.37374,903.12099 c 2.34055,-0.0589 13.82516,-9.03593 16.41516,-10.86593 2.9,-2.04 17.1111,-13.28506 26.0711,-21.27506 5.84,-5.23 17.3,-15.75 22.92,-21.03 0.13,-0.12 5.19,-3.8 8.84,-7.65 0.42,-0.45 4.18,-2.99 5.3,-3.05 1,-0.03 2.44,2.9 2.49,4.04 -0.02,0.82 -11.49,15.86 -12.24,16.72 -6.99,7.91 -14.66,17.44 -18.19,21.77 -5.32,6.59 -30.32,41.11 -30.58,41.76 -0.08,0.26 18.1,27.2 22.61,33.75 2.95,4.14 12.16,15.47 14,17.36 4.77,4.92 22.08,26.05 23.1,27.05 2.15,2.18 0.99,6.07 0.17,6.46 -1.66,0.12 -4.03,0.09 -4.92,-0.25 -0.89,-0.34 -15.62,-15.28 -19.46,-18.23 -2.44,-1.96 -18.72,-16.39 -22.17,-19.2 -16.92962,-13.44945 -32.67608,-24.83334 -34.73,-25.23 -0.46,-0.31 -31.78,22.61 -38.19,28 -19.67,17.08 -30.27,25.59 -35.96,32.96 -1.35,1.71 -4.67,2.21 -6.35,2.35 -1.59,-0.73 -2.59,-2.89 -2.05,-5.08 0.12,-0.46 6.14,-6.9 8.25,-9.38 2.13,-2.52 12.32,-15.48 18.33,-21.66 5.58,-5.79 33.16,-46.47 34.3,-48.04 0.35,-0.61 -0.71,-2 -3.97,-6.56 -5.04,-6.95 -24.87,-34.71 -33.86,-44.85 -1.72,-1.94 -3.16,-4.54 -3.85,-5.49 -0.1,-0.12 -8.16,-8.88 -9.08,-10.01 -1.08,-1.32 -3.89,-5.29 -7.51,-10.02 -1.95,-2.55 -2.96,-4.45 -2.04,-6.35 0.63,-1.27 1.27,-1.89 1.94,-1.87 1.12,0.06 4.88,2.6 5.3,3.05 3.64,3.84 7.38,6.25 8.88,7.74 12.86,12.63 29.57,27.23 32.91,29.75 6.57,4.84 18.130218,13.02549 20.550218,14.98549 2.149887,1.5922 10.499012,8.09429 12.773522,8.3455 z" 
+        fill="white" stroke="black" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+        
+        <path d="m 105.53,1259.99 c -0.54,-1.26 -2.84,-45.34 -3.33,-57.16 -0.28,-15.98 -0.68,-51.78 -0.01,-59.81 0.41,-4.96 2.45,-42.26 2.4,-42.6 -0.19,-1.75 0.59,-3.93 2.09,-5.12 0.44,-0.34 1.22,-0.61 2.35,-0.81 0.99,0.1 3.57,0.32 4.17,0.81 1.48,1.21 2.28,3.38 2.09,5.12 -0.04,0.34 3.05,50.35 3.04,56.46 -0.49,49.6 -3.43,101.84 -3.98,103.11 -1.08,2.47 -2.63198,3.6249 -4.38099,3.616 -1.7245,-0.01 -3.34901,-1.146 -4.43901,-3.616 z" 
+        fill="white" stroke="#FFFF74" stroke-width="28.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+        <path d="m 105.53,1259.99 c -0.54,-1.26 -2.84,-45.34 -3.33,-57.16 -0.28,-15.98 -0.68,-51.78 -0.01,-59.81 0.41,-4.96 2.45,-42.26 2.4,-42.6 -0.19,-1.75 0.59,-3.93 2.09,-5.12 0.44,-0.34 1.22,-0.61 2.35,-0.81 0.99,0.1 3.57,0.32 4.17,0.81 1.48,1.21 2.28,3.38 2.09,5.12 -0.04,0.34 3.05,50.35 3.04,56.46 -0.49,49.6 -3.43,101.84 -3.98,103.11 -1.08,2.47 -2.63198,3.6249 -4.38099,3.616 -1.7245,-0.01 -3.34901,-1.146 -4.43901,-3.616 z" 
+        fill="white" stroke="black" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+        
+        <path d="m 105.53,1514.99 c -0.54,-1.26 -2.84,-45.34 -3.33,-57.16 -0.28,-15.98 -0.68,-51.78 -0.01,-59.81 0.41,-4.96 2.45,-42.26 2.4,-42.6 -0.19,-1.75 0.59,-3.93 2.09,-5.12 0.44,-0.34 1.7422,-0.61 2.8722,-0.81 0.99,0.1 3.0478,0.32 3.6478,0.81 1.48,1.21 2.28,3.38 2.09,5.12 -0.04,0.34 3.05,50.35 3.04,56.46 -0.49,49.6 -3.43,101.84 -3.98,103.11 -1.08,2.47 -2.50143,3.5524 -4.36648,3.529 -1.68099,0.052 -3.36352,-1.059 -4.45352,-3.529 z"
+        fill="white" stroke="#FFFF74" stroke-width="28.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+        <path d="m 105.53,1514.99 c -0.54,-1.26 -2.84,-45.34 -3.33,-57.16 -0.28,-15.98 -0.68,-51.78 -0.01,-59.81 0.41,-4.96 2.45,-42.26 2.4,-42.6 -0.19,-1.75 0.59,-3.93 2.09,-5.12 0.44,-0.34 1.7422,-0.61 2.8722,-0.81 0.99,0.1 3.0478,0.32 3.6478,0.81 1.48,1.21 2.28,3.38 2.09,5.12 -0.04,0.34 3.05,50.35 3.04,56.46 -0.49,49.6 -3.43,101.84 -3.98,103.11 -1.08,2.47 -2.50143,3.5524 -4.36648,3.529 -1.68099,0.052 -3.36352,-1.059 -4.45352,-3.529 z"
+        fill="white" stroke="black" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+    </g>
+    <pattern
+        id="dashstar-pattern"
+        patternUnits="userSpaceOnUse"
+        patternContentUnits="userSpaceOnUse"
+        width="500"
+        height="935"
+        patternTransform="translate(100 -150)"
+    ><!--   default -> 167 680"-->
+        <use href="#dashstar-shape" transform="translate(0 -600)"/>
+    </pattern>
+  </defs>
+</svg>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <g id="scifi-shape">
+        <path d="M125.31,1466.64 L135.76,1462.69 L136.46,1462.76 L146.50,1466.50 L146.50,1689.50 L166.50,1711.50 L166.50,1792.50 L148.50,1822.50 L148.50,1741.50 L125.45,1737.31 L125.31,1466.64 Z" 
+        fill="#373A43" stroke="#1E555F" stroke-width="12.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+        <path d="M125.31,1466.64 L135.76,1462.69 L136.46,1462.76 L146.50,1466.50 L146.50,1689.50 L166.50,1711.50 L166.50,1792.50 L148.50,1822.50 L148.50,1741.50 L125.45,1737.31 L125.31,1466.64 Z" 
+        fill="#373A43" stroke="black" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+        
+        <path d="M69.44,1547.81 L88.31,1547.56 L97.50,1573.50 L97.50,1766.50 L121.50,1766.50 L121.50,1860.50 L68.50,1797.50 L68.50,1568.50 L69.44,1547.81 Z" 
+        fill="#373A43" stroke="#1E555F" stroke-width="12.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+        <path d="M69.44,1547.81 L88.31,1547.56 L97.50,1573.50 L97.50,1766.50 L121.50,1766.50 L121.50,1860.50 L68.50,1797.50 L68.50,1568.50 L69.44,1547.81 Z" 
+        fill="#373A43" stroke="black" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+
+        <path d="M114.50,2063.50 L136.50,2062.50 L136.50,2288.50 L170.50,2317.50 L170.50,2458.50 L164.50,2461.50 L158.50,2461.50 L151.50,2456.50 L151.50,2334.50 L114.36,2301.65 L114.50,2063.50 Z" 
+        fill="#373A43" stroke="#1E555F" stroke-width="12.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+        <path d="M114.50,2063.50 L136.50,2062.50 L136.50,2288.50 L170.50,2317.50 L170.50,2458.50 L164.50,2461.50 L158.50,2461.50 L151.50,2456.50 L151.50,2334.50 L114.36,2301.65 L114.50,2063.50 Z" 
+        fill="#373A43" stroke="black" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+
+        <path d="M75.50,2066.50 L99.50,2066.50 L99.50,2309.50 L130.50,2337.50 L130.50,2447.50 L116.94,2454.96 L103.50,2446.50 L103.50,2353.50 L69.50,2321.50 L69.50,2092.50 L75.50,2066.50 Z" 
+        fill="#373A43" stroke="#1E555F" stroke-width="12.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+        <path d="M75.50,2066.50 L99.50,2066.50 L99.50,2309.50 L130.50,2337.50 L130.50,2447.50 L116.94,2454.96 L103.50,2446.50 L103.50,2353.50 L69.50,2321.50 L69.50,2092.50 L75.50,2066.50 Z" 
+        fill="#373A43" stroke="black" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+
+        <path d="M106.97,2663.75 L179.50,2695.50 L179.50,3061.50 L154.50,3038.50 L154.50,2904.50 L106.40,2856.38 L106.97,2663.75 Z" 
+        fill="#373A43" stroke="#1E555F" stroke-width="12.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+        <path d="M106.97,2663.75 L179.50,2695.50 L179.50,3061.50 L154.50,3038.50 L154.50,2904.50 L106.40,2856.38 L106.97,2663.75 Z" 
+        fill="#373A43" stroke="black" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+
+        <path d="M64.34,2729.73 L76.14,2724.68 L77.38,2724.53 L89.50,2730.50 L89.50,2862.50 L139.54,2914.33 L139.54,2959.03 L115.97,2949.61 L115.56,2916.90 L64.55,2870.05 L64.34,2729.73 Z" 
+        fill="#373A43" stroke="#1E555F" stroke-width="12.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+        <path d="M64.34,2729.73 L76.14,2724.68 L77.38,2724.53 L89.50,2730.50 L89.50,2862.50 L139.54,2914.33 L139.54,2959.03 L115.97,2949.61 L115.56,2916.90 L64.55,2870.05 L64.34,2729.73 Z" 
+        fill="#373A43" stroke="black" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+
+        <path d="M115.30,2967.06 L138.57,2975.51 L138.20,3016.54 L138.17,3023.00 L115.74,3004.24 L115.30,2967.06 Z" 
+        fill="#373A43" stroke="#1E555F" stroke-width="12.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+        <path d="M115.30,2967.06 L138.57,2975.51 L138.20,3016.54 L138.17,3023.00 L115.74,3004.24 L115.30,2967.06 Z" 
+        fill="#373A43" stroke="black" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+    </g>
+    <pattern
+        id="scifi-pattern"
+        patternUnits="userSpaceOnUse"
+        patternContentUnits="userSpaceOnUse"
+        width="400"
+        height="1850"
+        patternTransform="translate(128 0)"
+    ><!--   default -> 400 1600-->
+        <use href="#scifi-shape" transform="translate(-60 -1460)"/>
+    </pattern>
+  </defs>
+</svg>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <pattern id="arrow-pattern-down" patternUnits="userSpaceOnUse" width="500" height="125">
+        <animateTransform
+            attributeName="patternTransform"
+            type="translate"
+            from="0 0"
+            to="0 125"
+            dur="4s"
+            repeatCount="indefinite"
+        />
+
+        <svg width="160" height="50">
+            <use href="#arrow-shape"/>
+        </svg>
+    </pattern>
+    <pattern id="arrow-pattern-up" patternUnits="userSpaceOnUse" width="500" height="125">
+        <animateTransform
+            attributeName="patternTransform"
+            type="translate"
+            from="0 125"
+            to="0 0"
+            dur="4s"
+            repeatCount="indefinite"
+        />
+
+        <svg width="160" height="50">
+            <use href="#arrow-shape" transform="scale(1 -1) translate(20 -50)" />
+        </svg>
+    </pattern>
+
+  </defs>
+</svg>
+
+
+<body id="top">
+
+    <svg class="ui-grid" viewBox="0 0 1000 2169" preserveAspectRatio="none">
+        <!-- default 1000 2300 -->
+    <defs>
+        <pattern
+        id="macro-grid"
+        width="298"
+        height="298"
+        patternUnits="userSpaceOnUse"
+        >
+        <rect
+            width="400"
+            height="400"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1"
+            opacity="0.2"
+        />
+        </pattern>
+    </defs>
+    <defs>
+    <!-- <linearGradient id="fadeY" x1="0.5" y1="0" x2="0.5" y2="0.1">
+        <stop offset="0%" stop-color="white" stop-opacity="0"/>
+        <stop offset="20%" stop-color="white" stop-opacity="1"/>
+        <stop offset="80%" stop-color="white" stop-opacity="1"/>
+        <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+
+    <mask id="grid-fade">
+        <rect width="1000%" height="1000%" fill="url(#fadeY)" />
+    </mask> -->
+    </defs>
+
+    <rect
+        mask="url(#grid-fade)"
+        width="1000%"
+        height="1000%"
+        fill="url(#macro-grid)"
+        transform="translate(-105 0)"
+    />
+    </svg>
+
     <header>
+
         <nav>
-            <a href="#" class="logo">Dewi Delbe</a>
-            <ul class="nav-menu">
-                <li><a href="#logo" data-i18n="nav_logo">Logo Design</a></li>
-                <li><a href="#print" data-i18n="nav_print">Print Design</a></li>
-                <li><a href="#mascot" data-i18n="nav_mascot">Mascot</a></li>
-                <li><a href="#font" data-i18n="nav_font">Custom Font</a></li>
-                <li><a href="#illustrations" data-i18n="nav_illustrations">Illustrations</a></li>
-                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
-            </ul>
-            <div class="control-buttons">
-                <button class="btn-control" id="themeToggle" data-i18n="theme_toggle">🌙 Dark Mode</button>
-                <select class="btn-control" id="languageSelect" data-i18n="language_label">
-                    <option value="en" data-i18n="lang_english">English</option>
-                    <option value="es" data-i18n="lang_spanish">Spanish</option>
-                    <option value="fr" data-i18n="lang_french">French</option>
-                </select>
+            <div class="title">
+                <a href="#" class="name">-----------------------Dewi DELBE</a>
+                <div class="h2box">
+                <h2>&#60Graphic Designer&#62</h2>
+                <h2>&#60Artist&#62</h2>
+                </div>
+            </div>
+            <div id="dynnav" class="nav-menu">
+                <a href="#logo" data-i18n="nav_logo">Logo Design</a>
             </div>
         </nav>
+        <section class="stargroup">
+        <section class="starredwrap1">
+            <svg class="starred" width="960.00" height="1620.00">
+                <use href="#star-shape" transform="translate(-450, 0)"/>
+            </svg>
+        </section>
+        <section class="starredwrap2">
+            <svg class="starred" width="960.00" height="1620.00">
+                <use href="#star-shape" transform="translate(-450, 0)"/>
+            </svg>
+        </section>
+        <section class="starredwrap3">
+            <svg class="starred" width="960.00" height="1620.00">
+                <use href="#star-shape" transform="translate(-450, 0)"/>
+            </svg>
+        </section></section>
+
+        <div class="control-buttons">
+            <button class="btn-control" id="themeToggle" data-i18n="theme_toggle">
+                <svg width="75" height="75">
+                    <use href="#darkTico"/>
+                </svg>
+            </button>
+            <select class="btn-control" id="languageSelect">
+                <option value="en">EN</option>
+                <option value="es">ES</option>
+                <option value="fr">FR</option>
+            </select>
+        </div>
+        
     </header>
+
+
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+    <section class="hero">
             <h1 data-i18n="hero_title">Creative Design Portfolio</h1>
             <p data-i18n="hero_subtitle">Bringing Ideas to Life Through Design</p>
-            <button class="cta-button" data-i18n="cta_explore">Explore My Work</button>
+            <!-- <button class="cta-button" data-i18n="cta_explore">Explore My Work</button> -->
         
+        <!-- Viewer -->
+         <div id="project-viewer" >
+            <div class="viewer-backdrop"></div>
+
+        <div class="viewer-content">
+            <div class="viewer-images"></div>
+        </div>
+        </div>
 
         <!-- Logo Design Section -->
         <section id="logo">
             <h2 data-i18n="section_logos">Logo Design</h2>
             <div class="portfolio-grid">
-                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
-                    <div class="portfolio-item-image"><img src="visuals/logo/skyrunner.webp" alt="Skyrunner Logo" width="500" height="600"></div>
-                    <!-- <div class="portfolio-item-content">
-                        <h3 data-i18n="logo_corp_title">Corporate Identity</h3>
-                        <p data-i18n="logo_corp_desc">Professional logos for businesses and startups with modern design principles</p>
-                    </div> -->
-                </div></div>
-                  <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
-                    <div class="portfolio-item-image"><img src="visuals/logo/vitraux.webp" alt="Vitraux Logo" width="500" height="600"></div>
-                    <!-- <div class="portfolio-item-content">
-                        <h3 data-i18n="logo_creative_title">Creative Marks</h3>
-                        <p data-i18n="logo_creative_desc">Unique and memorable logo designs that capture brand essence</p>
-                    </div> -->
-                </div></div>
-                  <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
-                    <div class="portfolio-item-image"><img src="visuals/logo/metallurgy.webp" alt="Metallurgy Logo" width="500" height="600"></div>
-                    <!-- <div class="portfolio-item-content">
-                        <h3 data-i18n="logo_modern_title">Modern Designs</h3>
-                        <p data-i18n="logo_modern_desc">Contemporary logo designs with minimal aesthetics</p>
-                    </div> -->
-                </div></div>
+                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg>
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-image" id="lg" data-alt="skyrunner"><img src="visuals/logo/skyrunner.webp" alt="Skyrunner Logo" width="100%" height="100%"></div>
+                    </div></div>
+                  <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg>
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-image" id="lg" data-alt="vitraux"><img src="visuals/logo/vitraux.webp" alt="Vitraux Logo" width="100%" height="100%"></div>
+                    </div></div>
+                  <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg>
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-image" id="lg" data-alt="metallurgy"><img src="visuals/logo/metallurgy.webp" alt="Metallurgy Logo" width="100%" height="100%"></div>
+                    </div></div>
+                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg>
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-image" id="lg" data-alt="cloudrange"><img src="visuals/logo/cloudrange.webp" alt="Cloudrange Logo" width="100%" height="100%"></div>
+                    </div></div>
             </div>
         </section>
 
@@ -71,99 +314,164 @@
         <section id="print">
             <h2 data-i18n="section_print">Print Design</h2>
             <div class="portfolio-grid">
-                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
-                    <div class="portfolio-item-image">📇</div>
-                    <!-- <div class="portfolio-item-content">
-                        <h3 data-i18n="print_business_title">Business Cards</h3>
-                        <p data-i18n="print_business_desc">Professional business card designs that make a lasting impression</p>
-                    </div> -->
+                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/>
+                </svg><div class="portfolio-item">
+                    <div class="portfolio-item-image" id="pt" data-print="brochure"><img src="visuals/prints/blank-brochure.webp" id="brochure" alt="blankbrochure" width="100%" height="100%"></div>
                 </div></div>
-                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
-                    <div class="portfolio-item-image">📄</div>
-                    <!-- <div class="portfolio-item-content">
-                        <h3 data-i18n="print_stationery_title">Stationery Sets</h3>
-                        <p data-i18n="print_stationery_desc">Complete stationery designs including letterheads and envelopes</p>
-                    </div> -->
+                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" id="brochureP" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg>
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-image" id="pt" data-print="card"><img src="visuals/prints/blank-card.webp" id="card" alt="blankcard" width="100%" height="100%"></div>
+                    </div></div>
+              <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg>
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image" id="pt" data-print="datasheet"><img src="visuals/prints/blank-datasheet.webp" id="datasheet" alt="blankdatasheet" width="100%" height="100%"></div>
                 </div></div>
-              <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
-                    <div class="portfolio-item-image">🎁</div>
-                    <!-- <div class="portfolio-item-content">
-                        <h3 data-i18n="print_packaging_title">Packaging Design</h3>
-                        <p data-i18n="print_packaging_desc">Eye-catching packaging designs for retail and promotional products</p>
-                    </div> -->
+            <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg>
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image" id="pt" data-print="flyer"><img src="visuals/prints/blank-flyer.webp" id="flyer" alt="blankflyer" width="100%" height="100%"></div>
                 </div></div>
+            </div>
             </div>
         </section>
 
-        <!-- Mascot Design Section -->
-        <section id="mascot">
+        <!-- Mascot Design + Custom Section -->
+        <div class="portfolio-grid2"><section id="mascot">
             <h2 data-i18n="section_mascots">Mascot Design</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
-                    <div class="portfolio-item-image"><img src="visuals/mascot1.webp" alt= "Mascot 1" width="500" height="600"></div>
-                    <!-- <div class="portfolio-item-content">
-                        <h3 data-i18n="mascot_animal_title">Animal Mascots</h3>
-                        <p data-i18n="mascot_animal_desc">Playful and engaging animal character designs for brands</p>
-                    </div> -->
-                </div></div>
-                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
-                    <div class="portfolio-item-image"><img src="visuals/mascot2.webp" alt="Mascot 2" width="500" height="600"></div>
-                    <!-- <div class="portfolio-item-content">
-                        <h3 data-i18n="mascot_custom_title">Custom Characters</h3>
-                        <p data-i18n="mascot_custom_desc">Original character designs tailored to brand identity</p>
-                    </div> -->
-                </div></div>
-            </div>
+                <div class="portfolio-bg"><div class="portfolio-border" id="container"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg>
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-image2"><img src="visuals/mascot1.webp" alt= "Mascot 1" width="500" height="600"></div>
+                    </div></div>
+                <div class="portfolio-border" id="container"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg>
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-image2"><img src="visuals/mascot2.webp" alt="Mascot 2" width="500" height="600"></div>
+                    </div></div></div>
         </section>
-
-        <!-- Custom Font Section -->
         <section id="font">
             <h2 data-i18n="section_fonts">Custom Font Design</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-item-image">🔤</div>
-                    <!-- <div class="portfolio-item-content">
-                        <h3 data-i18n="font_serif_title">Serif Typefaces</h3>
-                        <p data-i18n="font_serif_desc">Elegant serif fonts suitable for premium brands and publications</p>
-                    </div> -->
-            </div>
-        </section>
+                <div class="portfolio-bg"><div class="portfolio-text">
+                    <p>ABCDEFGHIJKLMN</p><p>PQRSTUVWXYZ</p>
+                    <p>0123456789.,;!?-</p>
+                </div></div>
+        </section></div>
 
         <!-- Illustrations Section -->
         <section id="illustrations">
             <h2 data-i18n="section_illustrations">Illustrations</h2>
             <div class="portfolio-grid">
-                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
-                    <div class="portfolio-item-image"><img src="visuals/illust/AuroreBirthday2022.webp" alt="Illust 1" width="500" height="600"></div>
-                    <!-- <div class="portfolio-item-content">
-                        <h3 data-i18n="illus_digital_title">Digital Illustrations</h3>
-                        <p data-i18n="illus_digital_desc">Hand-crafted digital artwork for various applications</p>
-                    </div> -->
-                </div></div>
-                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
-                    <div class="portfolio-item-image"><img src="visuals/illust/CareImposing2-WPver.webp" alt="Illust 2" width="500" height="600"></div>
-                    <!-- <div class="portfolio-item-content">
-                        <h3 data-i18n="illus_concept_title">Concept Art</h3>
-                        <p data-i18n="illus_concept_desc">Original concept art and visual storytelling</p>
-                    </div> -->
-                </div></div>
-                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
-                    <div class="portfolio-item-image"><img src="visuals/illust/flowers.webp" alt="Illust 3" width="500" height="600"></div>
-                    <!-- <div class="portfolio-item-content">
-                        <h3 data-i18n="illus_vector_title">Vector Illustrations</h3>
-                        <p data-i18n="illus_vector_desc">Scalable vector graphics for print and web</p>
-                    </div> -->
-                </div></div>
-                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg><div class="portfolio-item">
-                    <div class="portfolio-item-image"><img src="visuals/illust/YoungMorgana.webp" alt="Illust 4" width="500" height="600"></div>
-                    <!-- <div class="portfolio-item-content">
-                        <h3 data-i18n="illus_vector_title">Vector Illustrations</h3>
-                        <p data-i18n="illus_vector_desc">Scalable vector graphics for print and web</p>
-                    </div> -->
-                </div></div>
-            </div>
+                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg>
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-image" id="ill-ct"><img src="visuals/illust/AuroreBirthday2022-thumb.webp" id="illust" alt="Illust 1" width="100%" height="100%" onclick="window.open('visuals/illust/AuroreBirthday2022.webp', '_blank');"></div>
+                    </div></div>
+                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg>
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-image" id="ill-ct"><img src="visuals/illust/CareImposing2-WPver-thumb.webp" id="illust" alt="Illust 2" width="100%" height="100%" onclick="window.open('visuals/illust/CareImposing2-WPver.webp', '_blank');"></div>
+                    </div></div>
+                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg>
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-image" id="ill-ct"><img src="visuals/illust/flowers-thumb.webp" id="illust" alt="Illust 3" width="100%" height="100%" onclick="window.open('visuals/illust/flowers.webp', '_blank');"></div>
+                    </div></div>
+                <div class="portfolio-border"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg>
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-image" id="ill-ct"><img src="visuals/illust/YoungMorgana-thumb.webp" id="illust" alt="Illust 4" width="100%" height="100%" onclick="window.open('visuals/illust/YoungMorgana.webp', '_blank');"></div>
+                    </div></div>
+            </div> 
         </section>
+
+         <!-- SVG stuff -->
+
+        <section class="flowerwrap">
+            <svg class="flower" width="960.00" height="1620.00" viewBox="0.00 0.00 1920.00 3240.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g stroke-linecap="round" id="flower">
+                <path class="x01" d="M1442.00,2580.50 C1438.72,2580.89 1431.53,2581.29 1428.66,2580.72 C1426.01,2580.16 1419.69,2577.42 1416.49,2575.42 C1413.23,2573.37 1405.93,2567.29 1403.52,2564.87 C1400.58,2561.84 1398.58,2556.84 1398.38,2553.62 C1398.21,2549.81 1399.99,2544.09 1401.74,2541.85 C1403.77,2539.32 1454.44,2495.57 1454.50,2495.38 C1454.61,2494.92 1447.20,2492.69 1443.57,2490.23 C1440.43,2488.04 1435.65,2483.37 1433.50,2480.38 C1431.58,2477.66 1427.51,2469.94 1426.81,2467.12 C1426.12,2464.05 1427.42,2459.17 1429.78,2454.93 C1433.13,2449.17 1434.14,2447.55 1436.93,2443.45 C1440.46,2438.36 1453.93,2429.09 1459.45,2425.28 C1488.56,2405.98 1524.22,2382.29 1524.25,2382.25 C1524.83,2381.40 1525.66,2378.76 1526.89,2377.46 C1532.10,2371.96 1538.35,2366.43 1540.60,2364.68 C1543.28,2362.65 1548.50,2361.88 1552.94,2361.85 C1555.59,2361.89 1610.17,2364.68 1614.50,2365.12 C1619.96,2365.71 1623.67,2366.93 1627.25,2368.88 C1628.40,2369.51 1636.87,2374.60 1640.30,2376.51 C1642.20,2377.54 1643.83,2377.76 1644.85,2377.11 C1645.72,2376.47 1645.94,2375.10 1645.38,2374.08 C1643.42,2370.84 1635.07,2351.38 1634.90,2350.97 C1633.58,2347.87 1627.84,2339.50 1627.11,2338.45 C1626.19,2337.05 1626.38,2334.89 1627.55,2333.86 C1628.51,2333.06 1636.72,2327.62 1639.84,2325.29 C1649.92,2317.45 1660.95,2309.46 1666.52,2305.72 C1687.23,2292.22 1697.41,2286.96 1697.88,2286.88 C1700.01,2286.53 1702.35,2287.38 1704.16,2289.19 C1706.49,2291.59 1711.28,2297.67 1712.06,2298.75 C1715.23,2303.19 1721.41,2317.56 1722.57,2323.27 C1723.16,2326.25 1724.09,2333.11 1724.55,2336.53 C1724.81,2338.22 1725.38,2339.00 1726.06,2338.33 C1726.72,2337.68 1731.80,2332.16 1734.39,2330.01 C1737.29,2327.62 1743.46,2322.92 1746.61,2320.71 C1751.05,2317.69 1756.04,2315.12 1758.12,2315.62 C1759.14,2315.91 1761.13,2317.35 1761.75,2318.25 C1762.96,2320.10 1764.42,2326.87 1764.71,2330.72 C1764.93,2334.15 1763.77,2339.57 1762.50,2343.00 C1760.95,2347.09 1758.00,2352.37 1755.54,2355.37 C1751.78,2359.92 1744.12,2367.83 1737.88,2373.75 C1731.25,2379.95 1719.82,2389.56 1719.50,2389.88 C1718.46,2390.96 1717.91,2391.71 1717.88,2392.12 C1717.85,2392.73 1721.14,2392.52 1722.50,2392.00 C1725.04,2390.97 1739.39,2377.08 1741.12,2375.75 C1742.49,2374.72 1749.19,2371.02 1749.75,2371.12 C1751.25,2371.46 1758.31,2378.44 1759.17,2379.69 C1760.23,2381.27 1760.75,2383.28 1760.43,2384.60 C1759.89,2386.51 1757.51,2389.64 1754.29,2392.51 C1753.06,2393.63 1752.96,2394.69 1754.17,2395.07 C1756.15,2395.62 1762.93,2395.35 1765.12,2395.00 C1766.80,2394.72 1784.02,2390.32 1788.71,2388.72 C1791.80,2387.64 1798.40,2385.44 1801.57,2385.53 C1804.36,2385.66 1809.01,2388.91 1812.02,2392.19 C1813.43,2393.80 1814.32,2396.03 1814.12,2397.62 C1814.10,2397.77 1799.35,2416.21 1797.23,2418.70 C1792.62,2424.07 1781.21,2434.66 1775.87,2439.65 C1770.87,2444.50 1761.05,2454.42 1757.50,2456.54 C1755.04,2457.97 1737.02,2464.30 1733.75,2465.00 C1731.57,2465.50 1730.37,2465.87 1730.12,2466.12 C1729.43,2466.95 1738.93,2468.32 1743.23,2469.28 C1748.78,2470.56 1754.53,2473.00 1756.62,2475.38 C1756.66,2475.41 1759.87,2479.77 1760.00,2480.00 C1761.00,2481.78 1761.17,2483.19 1760.51,2484.71 C1758.59,2488.82 1756.61,2491.58 1752.89,2495.44 C1750.35,2498.06 1740.81,2508.87 1734.30,2514.93 C1729.88,2518.99 1715.39,2529.62 1711.71,2531.83 C1708.74,2533.61 1699.87,2537.23 1699.88,2537.25 C1699.95,2538.19 1702.50,2540.21 1703.55,2542.09 C1704.59,2543.97 1706.64,2547.59 1707.62,2548.88 C1708.62,2550.16 1710.77,2551.78 1711.29,2552.32 C1712.92,2554.02 1716.09,2561.50 1717.29,2565.53 C1718.47,2569.66 1718.45,2575.93 1717.50,2578.75 C1716.45,2581.71 1712.57,2587.48 1710.52,2590.18 C1708.69,2592.57 1704.16,2596.81 1702.25,2598.00 C1699.90,2599.43 1684.04,2604.76 1679.50,2605.13 C1677.49,2605.29 1669.83,2605.23 1666.49,2605.19 C1661.68,2605.11 1655.93,2604.41 1652.62,2602.90 C1651.33,2602.31 1645.22,2598.83 1644.62,2599.25 C1643.63,2600.00 1642.31,2603.19 1640.47,2604.79 C1634.02,2610.47 1622.37,2618.05 1616.69,2620.38 C1612.89,2621.93 1594.86,2628.33 1589.24,2629.72 C1585.95,2630.52 1577.35,2632.15 1573.64,2632.46 C1569.24,2632.78 1564.57,2631.79 1561.67,2629.93 C1558.58,2627.91 1550.89,2622.93 1548.45,2621.22 C1545.30,2618.96 1544.74,2615.03 1544.62,2615.00 C1543.92,2614.82 1532.97,2616.84 1531.15,2617.24 C1527.10,2618.11 1521.46,2617.88 1517.90,2616.92 C1514.36,2615.92 1509.03,2612.87 1506.14,2610.18 C1503.66,2607.84 1498.19,2601.87 1496.96,2599.97 C1495.24,2597.23 1494.17,2589.96 1494.38,2586.75 C1494.49,2584.68 1495.13,2580.07 1494.88,2579.88 C1494.77,2579.80 1486.28,2582.49 1483.00,2582.00 C1481.92,2581.81 1478.03,2580.09 1477.02,2579.37 C1474.29,2577.36 1471.27,2571.96 1469.69,2567.87 C1468.21,2563.97 1467.43,2560.00 1467.38,2560.00 C1466.94,2560.01 1462.70,2565.58 1460.38,2568.00 C1458.42,2570.02 1452.29,2575.22 1449.07,2577.45 C1445.84,2579.65 1443.57,2580.29 1442.00,2580.50 Z"
+                fill="white" stroke="rgb(0, 0, 0)" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+                <path class="x02" d="M1546.77,2613.15 C1546.53,2613.73 1542.63,2615.18 1541.02,2615.49 C1538.82,2615.88 1536.59,2615.76 1534.66,2615.19 C1530.91,2614.00 1525.76,2611.50 1523.98,2610.38 C1521.64,2608.89 1516.59,2604.66 1514.90,2602.44 C1513.14,2600.06 1511.08,2594.25 1510.19,2589.91 C1509.33,2585.58 1508.86,2578.42 1509.10,2573.51 C1509.30,2569.70 1509.84,2558.26 1509.86,2558.03 C1510.15,2554.59 1511.55,2550.65 1514.19,2544.16 C1519.06,2532.11 1527.69,2515.81 1527.82,2515.63 C1527.99,2515.39 1526.41,2522.41 1526.46,2526.76 C1526.51,2528.68 1527.00,2530.71 1527.82,2532.75 C1528.51,2534.52 1528.38,2536.10 1527.37,2538.52 C1525.46,2542.98 1524.99,2546.11 1524.52,2551.72 C1524.28,2555.15 1523.76,2563.07 1523.71,2566.45 C1523.67,2570.77 1524.72,2576.35 1526.43,2580.78 C1527.18,2582.68 1531.41,2592.21 1532.58,2595.14 C1534.42,2599.69 1537.17,2603.88 1540.02,2606.55 C1541.57,2607.99 1546.98,2612.50 1546.77,2613.15 Z" 
+                fill="black" stroke="rgb(0, 0, 0)" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+                <path class="x02" d="M1495.34,2578.66 C1495.16,2579.11 1497.61,2576.94 1498.96,2575.35 C1501.64,2572.15 1503.10,2567.31 1503.58,2563.22 C1504.35,2556.34 1506.43,2544.25 1508.50,2536.27 C1510.04,2530.13 1511.59,2516.96 1513.69,2512.66 C1515.08,2509.89 1528.65,2487.09 1528.88,2487.09 C1529.51,2487.19 1529.51,2489.97 1528.86,2491.70 C1527.69,2494.79 1524.42,2501.42 1522.81,2504.13 C1521.75,2505.92 1516.82,2513.54 1515.52,2517.59 C1514.60,2520.89 1510.34,2535.66 1508.68,2542.81 C1507.59,2547.61 1506.60,2553.47 1506.78,2556.51 C1506.95,2559.70 1506.63,2561.72 1505.46,2564.39 C1504.18,2567.19 1495.50,2578.32 1495.34,2578.66 Z" 
+                fill="black" stroke="rgb(0, 0, 0)" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+                <path class="x02" d="M1474.05,2526.17 C1473.62,2526.31 1473.10,2509.26 1473.62,2507.53 C1474.32,2505.37 1481.16,2499.39 1481.82,2499.66 C1482.35,2499.88 1484.93,2503.10 1485.50,2503.52 C1487.27,2504.87 1493.02,2504.74 1493.00,2504.98 C1492.77,2506.41 1484.08,2510.44 1482.72,2512.60 C1482.31,2513.28 1480.95,2515.47 1479.74,2516.71 C1478.58,2517.92 1475.38,2525.58 1474.05,2526.17 Z" 
+                fill="black" stroke="rgb(0, 0, 0)" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+                <path class="x02" d="M1456.38,2495.31 C1458.29,2495.64 1461.50,2495.80 1463.44,2495.50 C1465.14,2495.23 1473.31,2491.33 1477.02,2489.68 C1482.18,2487.36 1485.44,2484.69 1486.50,2482.25" 
+                fill="black" stroke="rgb(0, 0, 0)" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+                <path class="x02" d="M1493.81,2469.00 C1493.43,2469.05 1497.96,2460.10 1499.41,2455.92 C1500.49,2452.72 1503.15,2441.58 1503.31,2440.79 C1504.55,2434.71 1506.40,2429.24 1508.64,2426.49 C1508.90,2426.19 1524.39,2410.13 1529.45,2404.43 C1531.26,2402.53 1536.58,2397.60 1539.01,2396.02 C1543.67,2393.03 1558.84,2386.98 1565.20,2385.02 C1573.11,2382.61 1587.02,2380.14 1594.38,2380.18 C1594.49,2380.18 1616.25,2380.89 1623.32,2381.10 C1627.29,2381.31 1633.47,2382.34 1637.01,2383.89 C1638.78,2384.69 1640.88,2386.02 1641.67,2386.89 C1642.41,2387.76 1642.95,2390.02 1642.91,2391.68 C1642.82,2393.50 1642.12,2395.50 1641.12,2396.81 C1640.77,2397.25 1635.76,2402.67 1635.29,2402.55 C1634.92,2402.43 1632.43,2399.39 1631.67,2398.83 C1630.69,2398.14 1628.91,2397.82 1627.31,2398.17 C1620.47,2399.91 1602.33,2404.00 1597.50,2404.77 C1591.49,2405.71 1574.99,2406.62 1570.00,2408.20 C1563.91,2410.18 1547.71,2418.11 1544.50,2420.42 C1542.82,2421.65 1532.73,2431.72 1525.57,2438.18 C1520.63,2442.64 1507.89,2454.13 1506.81,2455.20 C1504.44,2457.57 1494.14,2468.89 1493.81,2469.00 Z" 
+                fill="black" stroke="rgb(0, 0, 0)" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+                <path class="x02" d="M1492.49,2503.76 C1492.19,2502.83 1500.22,2481.55 1503.01,2477.37 C1505.25,2474.05 1522.52,2458.63 1523.92,2457.30 C1525.44,2455.85 1528.34,2452.78 1528.17,2453.23 C1527.99,2453.71 1525.28,2457.66 1525.08,2458.21 C1524.70,2459.19 1524.77,2462.88 1524.84,2464.45 C1524.96,2467.19 1525.51,2468.99 1526.77,2470.32 C1527.59,2471.15 1530.99,2472.73 1532.21,2472.95 C1534.69,2473.33 1551.63,2466.39 1555.70,2464.55 C1559.75,2462.68 1564.36,2460.19 1566.86,2458.05 C1568.90,2456.28 1573.43,2451.03 1574.92,2448.82 C1576.52,2446.40 1580.53,2438.54 1582.18,2436.61 C1583.90,2434.61 1591.02,2429.75 1593.40,2427.72 C1598.13,2423.64 1605.69,2415.01 1606.78,2414.26 C1608.00,2413.44 1611.34,2412.23 1612.60,2412.19 C1613.55,2412.18 1616.74,2413.15 1616.36,2413.41 C1615.93,2413.69 1608.02,2415.42 1605.52,2417.32 C1602.73,2419.48 1599.11,2425.84 1598.42,2426.84 C1596.14,2430.13 1592.62,2433.26 1588.66,2435.95 C1585.88,2437.86 1580.75,2441.99 1579.29,2444.85 C1577.68,2448.51 1574.36,2453.52 1572.43,2455.60 C1570.48,2457.65 1567.51,2459.63 1563.74,2461.62 C1558.62,2464.34 1552.96,2467.79 1550.46,2470.45 C1547.50,2473.66 1537.99,2490.79 1536.72,2492.86 C1535.51,2494.83 1531.47,2500.55 1531.37,2500.38 C1531.25,2500.14 1531.64,2486.77 1531.27,2486.29 C1530.65,2485.88 1530.02,2485.47 1529.40,2485.07 C1529.01,2484.56 1532.11,2479.96 1534.27,2478.46 C1535.73,2477.45 1535.86,2476.21 1534.75,2475.39 C1534.23,2475.06 1532.25,2477.36 1531.56,2478.12 C1529.40,2480.18 1523.77,2486.36 1522.54,2487.51 C1521.51,2488.46 1514.82,2493.30 1511.87,2496.40 C1509.46,2498.92 1502.99,2502.14 1502.16,2502.72 C1501.45,2503.22 1498.68,2505.57 1498.22,2505.73 C1496.38,2506.28 1492.81,2504.63 1492.49,2503.76 Z" 
+                fill="black" stroke="rgb(0, 0, 0)" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+                <path class="x02" d="M1537.10,2535.12 C1536.14,2533.58 1536.18,2529.91 1537.38,2523.85 C1537.72,2522.16 1539.49,2514.22 1541.03,2510.69 C1543.78,2504.46 1549.83,2493.84 1554.69,2486.53 C1558.36,2481.12 1569.49,2466.45 1571.75,2464.59 C1571.91,2464.49 1570.26,2467.57 1570.06,2468.35 C1569.79,2469.40 1570.27,2479.56 1570.53,2480.75 C1571.24,2483.91 1574.40,2488.44 1577.29,2491.17 C1577.99,2491.83 1580.82,2494.45 1581.80,2494.93 C1582.63,2495.32 1586.72,2496.17 1587.25,2495.96 C1587.90,2495.68 1590.20,2493.76 1590.88,2493.33 C1592.31,2492.37 1593.56,2490.51 1593.75,2488.97 C1594.32,2481.57 1595.41,2469.29 1595.51,2468.91 C1595.57,2468.73 1595.96,2476.20 1596.78,2479.46 C1597.94,2483.96 1604.09,2499.41 1607.00,2506.53 C1610.45,2514.60 1616.16,2524.05 1621.99,2531.22 C1624.39,2534.15 1629.36,2539.43 1631.63,2541.25 C1634.27,2543.33 1641.35,2547.29 1643.05,2548.32 C1644.45,2549.23 1645.25,2551.23 1644.69,2552.77 C1644.28,2553.84 1639.69,2562.25 1636.80,2564.98 C1632.86,2568.64 1627.73,2572.63 1624.91,2573.25 C1622.63,2573.70 1615.86,2573.48 1611.84,2572.26 C1610.03,2571.69 1605.66,2570.01 1604.81,2569.40 C1603.35,2568.32 1600.81,2562.44 1598.50,2558.09 C1593.32,2548.68 1587.26,2536.52 1585.33,2531.01 C1583.19,2524.78 1581.44,2510.07 1580.87,2507.67 C1580.47,2506.13 1579.71,2505.81 1578.85,2506.83 C1575.07,2511.49 1561.62,2523.74 1559.92,2525.26 C1552.35,2532.27 1545.36,2536.78 1543.67,2537.19 C1540.51,2537.88 1537.79,2536.14 1537.10,2535.12 Z" 
+                fill="black" stroke="rgb(0, 0, 0)" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+                <path class="x02" d="M1596.73,2461.87 C1596.37,2461.34 1598.31,2455.39 1598.61,2455.11 C1598.89,2454.88 1599.64,2458.97 1599.92,2459.43 C1600.33,2460.12 1603.57,2461.14 1603.68,2461.21 C1603.91,2461.36 1607.86,2465.95 1612.80,2469.83 C1619.32,2474.77 1629.62,2482.53 1635.26,2486.54 C1638.88,2489.10 1644.75,2492.93 1647.51,2493.18 C1648.91,2493.28 1648.45,2492.37 1646.72,2491.21 C1643.11,2488.77 1623.04,2475.93 1620.54,2473.15 C1619.95,2472.48 1620.39,2472.55 1621.40,2473.28 C1625.01,2475.88 1631.15,2478.92 1635.33,2480.49 C1637.86,2481.43 1646.15,2484.10 1649.02,2484.09 C1650.09,2484.07 1650.47,2483.92 1650.17,2483.66 C1649.95,2483.48 1641.14,2480.39 1636.23,2477.60 C1633.28,2475.92 1620.99,2469.69 1611.18,2463.71 C1606.60,2460.84 1600.65,2456.85 1600.11,2455.43 C1599.52,2453.61 1601.66,2448.00 1602.22,2447.58 C1602.51,2447.40 1603.62,2451.35 1604.24,2452.43 C1605.02,2453.87 1613.38,2461.84 1614.36,2462.64 C1617.18,2464.94 1624.24,2468.66 1627.59,2469.97 C1631.27,2471.37 1638.69,2471.68 1641.74,2471.71 C1644.18,2471.73 1652.42,2471.96 1654.87,2471.60 C1656.93,2471.27 1660.35,2470.30 1662.60,2469.42 C1664.53,2468.62 1666.50,2467.05 1666.98,2465.86 C1667.30,2464.95 1666.59,2462.85 1665.74,2461.96 C1664.28,2460.51 1644.74,2446.18 1644.10,2445.81 C1643.24,2445.29 1641.79,2445.43 1641.38,2444.51 C1641.27,2444.16 1664.10,2443.06 1671.54,2441.53 C1679.83,2439.81 1687.28,2437.06 1697.87,2432.31 C1702.16,2430.35 1705.60,2428.45 1705.97,2426.64 C1706.22,2425.21 1706.21,2421.05 1705.85,2419.90 C1705.45,2418.69 1703.38,2416.87 1702.30,2416.59 C1700.84,2416.28 1692.55,2418.53 1691.18,2418.72 C1686.92,2419.33 1684.76,2420.02 1680.16,2422.08 C1676.90,2423.64 1670.13,2426.91 1667.42,2428.38 C1664.45,2430.01 1658.36,2434.87 1657.59,2435.40 C1656.25,2436.30 1652.93,2437.89 1652.50,2437.76 C1651.16,2437.21 1662.55,2426.01 1669.58,2418.51 C1673.62,2414.23 1685.27,2403.06 1690.50,2398.19 C1696.19,2392.73 1705.55,2381.75 1709.64,2376.25 C1712.81,2371.94 1716.35,2366.18 1717.45,2362.41 C1718.45,2358.81 1719.68,2339.58 1720.17,2331.86 C1720.39,2327.72 1720.09,2322.19 1719.20,2319.27 C1717.56,2313.99 1715.13,2306.13 1715.20,2305.98 C1715.48,2305.57 1719.31,2313.60 1720.52,2317.28 C1721.66,2320.83 1724.49,2336.77 1724.54,2340.64 C1724.57,2343.94 1723.68,2355.54 1723.72,2355.55 C1724.07,2355.55 1737.08,2335.62 1737.83,2334.46 C1739.54,2331.85 1742.72,2328.88 1746.90,2325.62 C1749.17,2323.92 1752.29,2321.91 1753.65,2321.48 C1755.05,2321.05 1758.99,2321.10 1760.15,2321.48 C1761.12,2321.83 1762.79,2323.40 1763.35,2324.31 C1764.25,2325.94 1764.47,2331.20 1764.20,2334.92 C1763.88,2338.67 1762.02,2344.91 1760.03,2348.85 C1758.05,2352.71 1755.43,2356.31 1752.73,2358.55 C1750.07,2360.74 1738.77,2373.27 1733.55,2377.92 C1728.18,2382.70 1718.94,2389.99 1714.68,2394.40 C1711.14,2398.01 1693.28,2411.42 1690.32,2413.75 C1688.89,2414.87 1688.66,2415.63 1690.31,2415.31 C1690.64,2415.25 1712.85,2409.88 1719.16,2407.98 C1726.07,2405.86 1740.14,2398.23 1746.04,2394.18 C1752.82,2389.50 1758.10,2383.82 1758.02,2382.87 C1757.92,2381.73 1756.19,2380.29 1757.08,2379.56 C1757.71,2379.07 1760.81,2382.30 1760.65,2383.58 C1760.33,2386.11 1755.99,2390.78 1751.28,2396.71 C1750.92,2397.17 1735.90,2412.28 1729.87,2418.25 C1722.97,2424.87 1712.22,2433.18 1706.90,2437.34 C1704.24,2439.34 1696.94,2443.07 1696.98,2443.20 C1697.22,2443.67 1715.67,2443.44 1724.60,2443.13 C1729.88,2442.86 1734.48,2441.80 1736.85,2439.77 C1737.39,2439.31 1741.23,2436.39 1741.58,2436.70 C1742.29,2437.42 1741.66,2440.63 1740.58,2441.81 C1738.16,2444.40 1713.09,2469.42 1709.22,2473.06 C1705.92,2476.13 1699.61,2479.76 1699.70,2480.23 C1700.18,2482.16 1705.36,2485.23 1708.10,2488.83 C1709.53,2490.76 1710.87,2493.54 1710.86,2494.71 C1710.80,2495.84 1709.50,2497.36 1707.94,2498.33 C1706.22,2499.35 1699.90,2502.28 1699.46,2502.39 C1695.44,2503.42 1675.67,2502.19 1675.21,2502.35 C1674.39,2502.70 1675.15,2504.08 1677.23,2506.49 C1678.35,2507.78 1683.42,2514.43 1684.92,2516.79 C1687.12,2520.28 1690.45,2527.83 1690.50,2530.08 C1690.49,2532.38 1684.26,2540.43 1684.68,2540.80 C1686.06,2541.79 1698.77,2535.51 1707.17,2530.83 C1713.68,2527.12 1728.55,2518.51 1731.66,2515.69 C1734.75,2512.87 1756.45,2489.23 1757.03,2488.63 C1758.35,2487.24 1759.47,2480.99 1759.56,2480.94 C1759.75,2480.86 1760.51,2484.58 1760.51,2485.55 C1760.48,2487.14 1756.40,2491.32 1754.38,2493.29 C1751.78,2495.90 1739.69,2510.16 1733.80,2515.53 C1728.23,2520.56 1717.79,2527.46 1707.42,2533.38 C1702.40,2536.30 1696.98,2540.37 1696.38,2540.63 C1694.20,2541.51 1683.45,2541.52 1682.15,2541.96 C1681.28,2542.27 1677.13,2546.43 1672.92,2548.72 C1668.42,2551.08 1664.75,2552.12 1661.21,2551.66 C1657.26,2551.09 1651.54,2549.68 1648.66,2548.35 C1646.03,2547.12 1640.30,2543.42 1637.63,2541.11 C1634.67,2538.52 1629.62,2533.13 1627.36,2530.14 C1622.49,2523.62 1616.44,2511.95 1612.39,2502.36 C1608.64,2493.25 1603.25,2478.69 1602.35,2474.93 C1601.44,2471.06 1600.75,2463.19 1599.60,2462.47 C1598.78,2461.94 1597.27,2462.69 1596.73,2461.87 Z" 
+                fill="black" stroke="rgb(0, 0, 0)" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+                <path class="x02" d="M1642.44,2440.62 C1641.59,2440.18 1639.24,2436.84 1638.50,2435.12 C1637.92,2433.72 1634.98,2418.57 1635.12,2418.19 C1635.63,2417.04 1638.10,2416.13 1640.92,2415.85 C1644.94,2415.44 1651.08,2415.18 1651.06,2415.50 C1650.93,2416.68 1649.57,2417.36 1648.94,2418.38 C1648.41,2419.19 1646.89,2424.58 1646.62,2425.25 C1646.22,2426.30 1642.04,2434.53 1642.31,2436.31 C1642.46,2437.24 1643.98,2440.32 1643.94,2440.50 C1643.79,2440.98 1643.29,2441.03 1642.44,2440.62 Z" 
+                fill="black" stroke="rgb(0, 0, 0)" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+                </g>
+            </svg>
+         </section>
+         <section class="starwrapgroup">
+            <section class="starwrap1">
+            <svg class="star" width="960.00" height="1620.00">
+                <use href="#star-shape" transform="translate(-380, 0)"/>
+            </svg>
+         </section>
+        <section class="starwrap2">
+            <svg class="star" width="960.00" height="1620.00">
+                <use href="#star-shape" transform="translate(-380, 0)"/>
+            </svg>
+         </section>
+         <section class="starwrap3">
+            <svg class="star" width="960.00" height="1620.00">
+                <use href="#star-shape" transform="translate(-380, 0)"/>
+            </svg>
+         </section>
         </section>
+         <svg class="arrow-lines">
+
+            <path class="arrowleft"
+                d="M 100 0 V 10000"
+                stroke="url(#arrow-pattern-down)"
+                stroke-width="300"
+                fill="currentColor"
+            />
+             <path class="arrowright"
+                d="M 1650 0 V 10000"
+                stroke="url(#arrow-pattern-up)"
+                stroke-width="250"
+                fill="currentColor"
+            />
+        </svg>
+        <svg class="dashstar">
+            <path class="dashstarleft"
+                d="M 200 0 V 10000"
+                stroke="url(#dashstar-pattern)"
+                stroke-width="250"
+                transform="translate(-40 0)"
+            />
+             <path class="dashstarright"
+                d="M 1650 0 V 10000"
+                stroke="url(#dashstar-pattern)"
+                stroke-width="315"
+            />
+        </svg>
+        <svg class="scifi">
+            <path class="scifileft"
+                d="M 200 0 V 10000"
+                stroke="url(#scifi-pattern)"
+                stroke-width="200"
+            />
+             <path class="scifiright"
+                d="M 1700 0 V 10000"
+                stroke="url(#scifi-pattern)"
+                stroke-width="300"
+                transform="translate(-90 0)"
+            />
+        </svg>
+    </section>
+
+
+         <section class="squareline"> <div class="divider">
+            <svg class="dotted-square" width="1100" height="150">
+                <polyline class="square-line" points="0,50 5000,50"/>
+            </svg></div>
+         </section>
+
 
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
@@ -190,6 +498,7 @@
 
     <footer>
         <p data-i18n="footer_text">© 2026 Dewi Delbe. All rights reserved.</p>
+        <a href="#top" class="shtTop">Top▲</a>
     </footer>
 
     <script>
@@ -199,65 +508,63 @@
                 // Navigation
                 nav_logo: 'Logo Design',
                 nav_print: 'Print Design',
-                nav_mascot: 'Mascot',
-                nav_font: 'Custom Font',
+                nav_mascot: 'Mascot - Font',
+                // nav_font: 'Custom Font',
                 nav_illustrations: 'Illustrations',
                 nav_contact: 'Contact',
-                theme_toggle: '🌙 Dark Mode',
-                language_label: 'Language',
-                lang_english: 'English',
-                lang_spanish: 'Spanish',
-                lang_french: 'French',
+                // theme_toggle: '🌙 Dark Mode',
                 
                 // Hero Section
+                // hero_title: 'Creative Design Portfolio',
                 hero_title: 'Creative Design Portfolio',
-                hero_subtitle: 'Bringing Ideas to Life Through Design',
-                cta_explore: 'Explore My Work',
+                // hero_subtitle: 'Bringing Ideas to Life Through Design',
+                hero_subtitle: 'Visual identity and narrative design',
+                // cta_explore: 'Explore My Work',
                 
                 // Logo Section
                 section_logos: 'Logo Design',
-                logo_corp_title: 'Corporate Identity',
-                logo_corp_desc: 'Professional logos for businesses and startups with modern design principles',
-                logo_creative_title: 'Creative Marks',
-                logo_creative_desc: 'Unique and memorable logo designs that capture brand essence',
-                logo_modern_title: 'Modern Designs',
-                logo_modern_desc: 'Contemporary logo designs with minimal aesthetics',
+                // logo_corp_title: 'Corporate Identity',
+                // logo_corp_desc: 'Professional logos for businesses and startups with modern design principles',
+                // logo_creative_title: 'Creative Marks',
+                // logo_creative_desc: 'Unique and memorable logo designs that capture brand essence',
+                // logo_modern_title: 'Modern Designs',
+                // logo_modern_desc: 'Contemporary logo designs with minimal aesthetics',
                 
                 // Print Section
                 section_print: 'Print Design',
-                print_business_title: 'Business Cards',
-                print_business_desc: 'Professional business card designs that make a lasting impression',
-                print_stationery_title: 'Stationery Sets',
-                print_stationery_desc: 'Complete stationery designs including letterheads and envelopes',
-                print_packaging_title: 'Packaging Design',
-                print_packaging_desc: 'Eye-catching packaging designs for retail and promotional products',
+                // print_business_title: 'Business Cards',
+                // print_business_desc: 'Professional business card designs that make a lasting impression',
+                // print_stationery_title: 'Stationery Sets',
+                // print_stationery_desc: 'Complete stationery designs including letterheads and envelopes',
+                // print_packaging_title: 'Packaging Design',
+                // print_packaging_desc: 'Eye-catching packaging designs for retail and promotional products',
                 
                 // Mascot Section
                 section_mascots: 'Mascot Design',
-                mascot_animal_title: 'Animal Mascots',
-                mascot_animal_desc: 'Playful and engaging animal character designs for brands',
-                mascot_custom_title: 'Custom Characters',
-                mascot_custom_desc: 'Original character designs tailored to brand identity',
-                mascot_emotional_title: 'Emotional Characters',
-                mascot_emotional_desc: 'Characters with diverse expressions for marketing campaigns',
+                // mascot_animal_title: 'Animal Mascots',
+                // mascot_animal_desc: 'Playful and engaging animal character designs for brands',
+                // mascot_custom_title: 'Custom Characters',
+                // mascot_custom_desc: 'Original character designs tailored to brand identity',
+                // mascot_emotional_title: 'Emotional Characters',
+                // mascot_emotional_desc: 'Characters with diverse expressions for marketing campaigns',
                 
                 // Font Section
                 section_fonts: 'Custom Font Design',
-                font_serif_title: 'Serif Typefaces',
-                font_serif_desc: 'Elegant serif fonts suitable for premium brands and publications',
-                font_sans_title: 'Sans-Serif Fonts',
-                font_sans_desc: 'Modern sans-serif typefaces for digital and print applications',
-                font_display_title: 'Display Fonts',
-                font_display_desc: 'Unique display typefaces for headlines and special applications',
+                // font_serif_title: 'Serif Typefaces',
+                // font_serif_desc: 'Elegant serif fonts suitable for premium brands and publications',
+                // font_sans_title: 'Sans-Serif Fonts',
+                // font_sans_desc: 'Modern sans-serif typefaces for digital and print applications',
+                // font_display_title: 'Display Fonts',
+                // font_display_desc: 'Unique display typefaces for headlines and special applications',
                 
                 // Illustrations Section
                 section_illustrations: 'Illustrations',
-                illus_digital_title: 'Digital Illustrations',
-                illus_digital_desc: 'Hand-crafted digital artwork for various applications',
-                illus_concept_title: 'Concept Art',
-                illus_concept_desc: 'Original concept art and visual storytelling',
-                illus_vector_title: 'Vector Illustrations',
-                illus_vector_desc: 'Scalable vector graphics for print and web',
+                // illus_digital_title: 'Digital Illustrations',
+                // illus_digital_desc: 'Hand-crafted digital artwork for various applications',
+                // illus_concept_title: 'Concept Art',
+                // illus_concept_desc: 'Original concept art and visual storytelling',
+                // illus_vector_title: 'Vector Illustrations',
+                // illus_vector_desc: 'Scalable vector graphics for print and web',
                 
                 // Contact Section
                 section_contact: 'Get In Touch',
@@ -274,65 +581,62 @@
                 // Navigation
                 nav_logo: 'Diseño de Logos',
                 nav_print: 'Diseño Gráfico',
-                nav_mascot: 'Mascota',
-                nav_font: 'Tipografía Personalizada',
+                // nav_mascot: 'Concepto de mascota y tipografía personalizada',
+                nav_mascot: 'Concepto y Tipografía',
+                // nav_font: 'Tipografía Personalizada',
                 nav_illustrations: 'Ilustraciones',
                 nav_contact: 'Contacto',
-                theme_toggle: '🌙 Modo Oscuro',
-                language_label: 'Idioma',
-                lang_english: 'Inglés',
-                lang_spanish: 'Español',
-                lang_french: 'Francés',
+                // theme_toggle: '🌙 Modo Oscuro',
                 
                 // Hero Section
                 hero_title: 'Portafolio de Diseño Creativo',
-                hero_subtitle: 'Dando Vida a las Ideas a Través del Diseño',
-                cta_explore: 'Explorar Mi Trabajo',
+                hero_subtitle: 'Identidad visual y diseño narrativo',
+                // cta_explore: 'Explorar Mi Trabajo',
                 
                 // Logo Section
                 section_logos: 'Diseño de Logos',
-                logo_corp_title: 'Identidad Corporativa',
-                logo_corp_desc: 'Logos profesionales para empresas y startups con principios de diseño moderno',
-                logo_creative_title: 'Marcas Creativas',
-                logo_creative_desc: 'Diseños de logos únicos y memorables que capturan la esencia de la marca',
-                logo_modern_title: 'Diseños Modernos',
-                logo_modern_desc: 'Diseños de logos contemporáneos con estética minimalista',
+                // logo_corp_title: 'Identidad Corporativa',
+                // logo_corp_desc: 'Logos profesionales para empresas y startups con principios de diseño moderno',
+                // logo_creative_title: 'Marcas Creativas',
+                // logo_creative_desc: 'Diseños de logos únicos y memorables que capturan la esencia de la marca',
+                // logo_modern_title: 'Diseños Modernos',
+                // logo_modern_desc: 'Diseños de logos contemporáneos con estética minimalista',
                 
                 // Print Section
                 section_print: 'Diseño Gráfico',
-                print_business_title: 'Tarjetas de Negocio',
-                print_business_desc: 'Diseños profesionales de tarjetas de negocio que dejan una impresión duradera',
-                print_stationery_title: 'Juegos de Papelería',
-                print_stationery_desc: 'Diseños completos de papelería incluyendo membretes y sobres',
-                print_packaging_title: 'Diseño de Embalaje',
-                print_packaging_desc: 'Diseños de embalaje llamativos para productos de retail y promocionales',
+                // print_business_title: 'Tarjetas de Negocio',
+                // print_business_desc: 'Diseños profesionales de tarjetas de negocio que dejan una impresión duradera',
+                // print_stationery_title: 'Juegos de Papelería',
+                // print_stationery_desc: 'Diseños completos de papelería incluyendo membretes y sobres',
+                // print_packaging_title: 'Diseño de Embalaje',
+                // print_packaging_desc: 'Diseños de embalaje llamativos para productos de retail y promocionales',
                 
                 // Mascot Section
                 section_mascots: 'Diseño de Mascotas',
-                mascot_animal_title: 'Mascotas de Animales',
-                mascot_animal_desc: 'Diseños de personajes de animales juguerones y atractivos para marcas',
-                mascot_custom_title: 'Personajes Personalizados',
-                mascot_custom_desc: 'Diseños de personajes originales adaptados a la identidad de marca',
-                mascot_emotional_title: 'Personajes Emocionales',
-                mascot_emotional_desc: 'Personajes con diversas expresiones para campañas de marketing',
+                // mascot_animal_title: 'Mascotas de Animales',
+                // mascot_animal_desc: 'Diseños de personajes de animales juguerones y atractivos para marcas',
+                // mascot_custom_title: 'Personajes Personalizados',
+                // mascot_custom_desc: 'Diseños de personajes originales adaptados a la identidad de marca',
+                // mascot_emotional_title: 'Personajes Emocionales',
+                // mascot_emotional_desc: 'Personajes con diversas expresiones para campañas de marketing',
                 
                 // Font Section
                 section_fonts: 'Diseño de Tipografía Personalizada',
-                font_serif_title: 'Tipografías Serif',
-                font_serif_desc: 'Fuentes serif elegantes adecuadas para marcas premium y publicaciones',
-                font_sans_title: 'Tipografías Sans-Serif',
-                font_sans_desc: 'Tipografías sans-serif modernas para aplicaciones digitales e impresas',
-                font_display_title: 'Tipografías de Exhibición',
-                font_display_desc: 'Tipografías de exhibición únicas para títulos y aplicaciones especiales',
+                // font_serif_title: 'Tipografías Serif',
+                // font_serif_desc: 'Fuentes serif elegantes adecuadas para marcas premium y publicaciones',
+                // font_sans_title: 'Tipografías Sans-Serif',
+                // font_sans_desc: 'Tipografías sans-serif modernas para aplicaciones digitales e impresas',
+                // font_display_title: 'Tipografías de Exhibición',
+                // font_display_desc: 'Tipografías de exhibición únicas para títulos y aplicaciones especiales',
                 
                 // Illustrations Section
                 section_illustrations: 'Ilustraciones',
-                illus_digital_title: 'Ilustraciones Digitales',
-                illus_digital_desc: 'Obras de arte digitales artesanales para varias aplicaciones',
-                illus_concept_title: 'Arte Conceptual',
-                illus_concept_desc: 'Arte conceptual original y narración visual',
-                illus_vector_title: 'Ilustraciones Vectoriales',
-                illus_vector_desc: 'Gráficos vectoriales escalables para impresos y web',
+                // illus_digital_title: 'Ilustraciones Digitales',
+                // illus_digital_desc: 'Obras de arte digitales artesanales para varias aplicaciones',
+                // illus_concept_title: 'Arte Conceptual',
+                // illus_concept_desc: 'Arte conceptual original y narración visual',
+                // illus_vector_title: 'Ilustraciones Vectoriales',
+                // illus_vector_desc: 'Gráficos vectoriales escalables para impresos y web',
                 
                 // Contact Section
                 section_contact: 'Ponte en Contacto',
@@ -349,65 +653,62 @@
                 // Navigation
                 nav_logo: 'Conception de Logos',
                 nav_print: 'Design Graphique',
-                nav_mascot: 'Mascotte',
-                nav_font: 'Police Personnalisée',
+                // nav_mascot: 'Concept de mascotte et police personnalisée',
+                nav_mascot: 'Mascotte - Typographie',
+                // nav_font: 'Police Personnalisée',
                 nav_illustrations: 'Illustrations',
                 nav_contact: 'Contact',
-                theme_toggle: '🌙 Mode Sombre',
-                language_label: 'Langue',
-                lang_english: 'Anglais',
-                lang_spanish: 'Espagnol',
-                lang_french: 'Français',
+                // theme_toggle: '🌙 Mode Sombre',
                 
                 // Hero Section
                 hero_title: 'Portfolio de Conception Créative',
-                hero_subtitle: 'Donner Vie aux Idées par le Design',
-                cta_explore: 'Explorer Mon Travail',
+                hero_subtitle: 'Identité visual et design narratif',
+                // cta_explore: 'Explorer Mon Travail',
                 
                 // Logo Section
                 section_logos: 'Conception de Logos',
-                logo_corp_title: 'Identité Corporative',
-                logo_corp_desc: 'Logos professionnels pour les entreprises et startups selon les principes de design modernes',
-                logo_creative_title: 'Marques Créatives',
-                logo_creative_desc: 'Designs de logos uniques et mémorables qui capturent l\'essence de la marque',
-                logo_modern_title: 'Conceptions Modernes',
-                logo_modern_desc: 'Designs de logos contemporains avec une esthétique minimaliste',
+                // logo_corp_title: 'Identité Corporative',
+                // logo_corp_desc: 'Logos professionnels pour les entreprises et startups selon les principes de design modernes',
+                // logo_creative_title: 'Marques Créatives',
+                // logo_creative_desc: 'Designs de logos uniques et mémorables qui capturent l\'essence de la marque',
+                // logo_modern_title: 'Conceptions Modernes',
+                // logo_modern_desc: 'Designs de logos contemporains avec une esthétique minimaliste',
                 
                 // Print Section
                 section_print: 'Design Graphique',
-                print_business_title: 'Cartes de Visite',
-                print_business_desc: 'Designs professionnels de cartes de visite qui laissent une impression durable',
-                print_stationery_title: 'Ensembles de Papeterie',
-                print_stationery_desc: 'Designs complets de papeterie incluant en-têtes et enveloppes',
-                print_packaging_title: 'Design d\'Emballage',
-                print_packaging_desc: 'Designs d\'emballage accrocheurs pour les produits de vente au détail et promotionnels',
+                // print_business_title: 'Cartes de Visite',
+                // print_business_desc: 'Designs professionnels de cartes de visite qui laissent une impression durable',
+                // print_stationery_title: 'Ensembles de Papeterie',
+                // print_stationery_desc: 'Designs complets de papeterie incluant en-têtes et enveloppes',
+                // print_packaging_title: 'Design d\'Emballage',
+                // print_packaging_desc: 'Designs d\'emballage accrocheurs pour les produits de vente au détail et promotionnels',
                 
                 // Mascot Section
                 section_mascots: 'Conception de Mascottes',
-                mascot_animal_title: 'Mascottes Animales',
-                mascot_animal_desc: 'Designs de personnages animaux ludiques et engageants pour les marques',
-                mascot_custom_title: 'Personnages Personnalisés',
-                mascot_custom_desc: 'Designs de personnages originaux adaptés à l\'identité de marque',
-                mascot_emotional_title: 'Personnages Émotionnels',
-                mascot_emotional_desc: 'Personnages avec diverses expressions pour les campagnes marketing',
+                // mascot_animal_title: 'Mascottes Animales',
+                // mascot_animal_desc: 'Designs de personnages animaux ludiques et engageants pour les marques',
+                // mascot_custom_title: 'Personnages Personnalisés',
+                // mascot_custom_desc: 'Designs de personnages originaux adaptés à l\'identité de marque',
+                // mascot_emotional_title: 'Personnages Émotionnels',
+                // mascot_emotional_desc: 'Personnages avec diverses expressions pour les campagnes marketing',
                 
                 // Font Section
                 section_fonts: 'Conception de Police Personnalisée',
-                font_serif_title: 'Polices Serif',
-                font_serif_desc: 'Polices serif élégantes adaptées aux marques premium et aux publications',
-                font_sans_title: 'Polices Sans-Serif',
-                font_sans_desc: 'Polices sans-serif modernes pour les applications numériques et imprimées',
-                font_display_title: 'Polices d\'Affichage',
-                font_display_desc: 'Polices d\'affichage uniques pour les titres et applications spéciales',
+                // font_serif_title: 'Polices Serif',
+                // font_serif_desc: 'Polices serif élégantes adaptées aux marques premium et aux publications',
+                // font_sans_title: 'Polices Sans-Serif',
+                // font_sans_desc: 'Polices sans-serif modernes pour les applications numériques et imprimées',
+                // font_display_title: 'Polices d\'Affichage',
+                // font_display_desc: 'Polices d\'affichage uniques pour les titres et applications spéciales',
                 
                 // Illustrations Section
                 section_illustrations: 'Illustrations',
-                illus_digital_title: 'Illustrations Numériques',
-                illus_digital_desc: 'Œuvres d\'art numérique artisanales pour diverses applications',
-                illus_concept_title: 'Art Conceptuel',
-                illus_concept_desc: 'Art conceptuel original et narration visuelle',
-                illus_vector_title: 'Illustrations Vectorielles',
-                illus_vector_desc: 'Graphiques vectoriels évolutifs pour impression et web',
+                // illus_digital_title: 'Illustrations Numériques',
+                // illus_digital_desc: 'Œuvres d\'art numérique artisanales pour diverses applications',
+                // illus_concept_title: 'Art Conceptuel',
+                // illus_concept_desc: 'Art conceptuel original et narration visuelle',
+                // illus_vector_title: 'Illustrations Vectorielles',
+                // illus_vector_desc: 'Graphiques vectoriels évolutifs pour impression et web',
                 
                 // Contact Section
                 section_contact: 'Restez en Contact',
@@ -422,14 +723,129 @@
             }
         };
 
+        // Alternatives pictures directory
+        const viewer = document.getElementById("project-viewer");
+        const viewerImages = document.querySelector(".viewer-images");
+        const alts = {
+            skyrunner: [
+                "visuals/alts/skyrunner.webp",
+                "visuals/alts/skyrunner-2.webp",
+                "visuals/alts/skyrunner-3.webp"
+            ],
+            vitraux: [
+                "visuals/alts/vitraux.webp",
+                "visuals/alts/vitraux-2.webp",
+                "visuals/alts/vitraux-3.webp"
+            ],
+            metallurgy: [
+                "visuals/alts/metallurgy.webp",
+                "visuals/alts/metallurgy-2.webp",
+                "visuals/alts/metallurgy-3.webp"
+            ],
+            cloudrange: [
+                "visuals/alts/cloudrange.webp",
+                "visuals/alts/cloudrange-2.webp",
+                "visuals/alts/cloudrange-3.webp"
+            ]
+        };
+        const prints = {
+            brochure: [
+                "visuals/prints/brochure-metallurgy.webp",
+                "visuals/prints/brochure-cloudrange.webp",
+                "visuals/prints/brochure-skyrunner.webp",
+                "visuals/prints/brochure-vitraux.webp"
+            ],
+            card: [
+                "visuals/prints/card-cloudrange.webp",
+                "visuals/prints/card-metallurgy.webp",
+                "visuals/prints/card-vitraux.webp",
+                "visuals/prints/card-skyrunner.webp"
+            ],
+            datasheet: [
+                "visuals/prints/datasheet-skyrunner.webp",
+                "visuals/prints/datasheet-metallurgy.webp",
+                "visuals/prints/datasheet-cloudrange.webp",
+                "visuals/prints/datasheet-vitraux.webp"
+            ],
+            flyer: [
+                "visuals/prints/flyer-vitraux.webp",
+                "visuals/prints/flyer-skyrunner.webp",
+                "visuals/prints/flyer-metallurgy.webp",
+                "visuals/prints/flyer-cloudrange.webp"
+            ]
+        };
+
+        //Viewer
+        document.querySelectorAll(".portfolio-item-image#lg").forEach(item => {
+        item.addEventListener("click", () => {
+            const key = item.dataset.alt;
+
+            viewerImages.innerHTML = "";
+
+            alts[key].forEach(src => {
+            const img = document.createElement("img");
+            img.src = src;
+            viewerImages.appendChild(img);
+            });
+
+            viewer.classList.add("active");
+        });
+        });
+
+        document.querySelectorAll(".portfolio-item-image#pt").forEach(item => {
+        item.addEventListener("click", () => {
+            const key = item.dataset.print;
+
+            viewerImages.innerHTML = "";
+
+            prints[key].forEach(src => {
+            const img = document.createElement("img");
+            img.src = src;
+            viewerImages.appendChild(img);
+            });
+
+            viewer.classList.add("active");
+        });
+        });
+
+        function closeViewer() {
+        viewer.classList.remove("active");
+        }
+
+        viewer.querySelector(".viewer-backdrop").addEventListener("click", closeViewer);
+
+        // Cycler
+        function cycleImages(img, images, delay = 3000) {
+            let index = 0;
+            // img.includes("visuals/print/blank-" + '') ? -1 : 1
+
+            setInterval(() => {
+                img.style.opacity = 0;
+
+                setTimeout(() => {
+                index = (index + 1) % images.length;
+                img.src = images[index];
+                img.style.opacity = 1;
+                }, 400);
+            }, delay);
+         }
+
+         Object.entries(prints).forEach(([key, images]) => {
+            const img = document.getElementById(key);
+            cycleImages(img, images, 3500);
+        });
+
         // Initialize language and theme
         let currentLanguage = localStorage.getItem('language') || 'en';
-        let isDarkMode = localStorage.getItem('darkMode') === 'true';
+        let isDarkMode = localStorage.getItem('darkMode') !== null 
+            ? localStorage.getItem('darkMode') === 'true'
+            : window.matchMedia('(prefers-color-scheme: dark)').matches;
 
         // Set initial theme
         if (isDarkMode) {
             document.body.classList.add('dark-mode');
-            document.getElementById('themeToggle').textContent = '☀️ Light Mode';
+            // document.getElementById('themeToggle').textContent = '☀️ Light Mode';
+            document.getElementById('themeToggle').querySelector("use").setAttribute("href", "#lightTico");
         }
 
         // Set initial language
@@ -443,9 +859,11 @@
             localStorage.setItem('darkMode', isDarkMode);
             
             if (isDarkMode) {
-                this.textContent = '☀️ ' + getTranslation('Light Mode', currentLanguage);
+                // this.textContent = '☀️ ' + getTranslation('Light Mode', currentLanguage);
+                this.querySelector("use").setAttribute("href", "#lightTico");
             } else {
-                this.textContent = '🌙 ' + getTranslation('Dark Mode', currentLanguage);
+                // this.textContent = '🌙 ' + getTranslation('Dark Mode', currentLanguage);
+                this.querySelector("use").setAttribute("href", "#darkTico");
             }
         });
 
@@ -474,25 +892,6 @@
                 }
             });
 
-            // Update language selector options
-            const langOptions = {
-                'en': translations[lang].lang_english,
-                'es': translations[lang].lang_spanish,
-                'fr': translations[lang].lang_french
-            };
-            
-            const options = document.getElementById('languageSelect').options;
-            options[0].textContent = langOptions.en;
-            options[1].textContent = langOptions.es;
-            options[2].textContent = langOptions.fr;
-
-            // Update theme toggle text
-            const themeToggle = document.getElementById('themeToggle');
-            if (isDarkMode) {
-                themeToggle.textContent = '☀️ Light Mode';
-            } else {
-                themeToggle.textContent = '🌙 ' + getTranslation('Dark Mode', lang);
-            }
         }
 
         // Helper function to get translation
@@ -520,10 +919,44 @@
             });
         });
 
-        // CTA Button functionality
-        document.querySelector('.cta-button').addEventListener('click', function() {
-            document.getElementById('logo').scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
+        // Dynamic nav - Fixed version
+        const navLink = document.querySelector("#dynnav a");
+        const sections = document.querySelectorAll("section#logo, section#print, section#mascot, section#illustrations, section#contact");
+
+        function updateNavOnScroll() {
+            // If at the top of the page, set nav to logo
+            if (window.scrollY < 10) {
+                navLink.setAttribute("data-i18n", 'nav_logo');
+                navLink.href = `#logo`;
+                updatePageLanguage(currentLanguage);
+                return;
+            }
+
+            let currentSection = null;
+            
+            // Find which section is currently visible
+            for (let section of sections) {
+                const rect = section.getBoundingClientRect();
+                // Check if section is in the upper half of viewport
+                if (rect.top < window.innerHeight / 2) {
+                    currentSection = section;
+                }
+            }
+
+            if (currentSection) {
+                const currentId = currentSection.id;
+                const currentIdx = Array.from(sections).findIndex(s => s.id === currentId);
+                const nextIdx = (currentIdx + 1) % sections.length;
+                const nextSection = sections[nextIdx];
+                
+                navLink.setAttribute("data-i18n", 'nav_' + nextSection.id);
+                navLink.href = `#${nextSection.id}`;
+                updatePageLanguage(currentLanguage);
+            }
+        }
+
+        window.addEventListener('scroll', updateNavOnScroll);
+        updateNavOnScroll(); // Initialize on page load
     </script>
 </body>
 </html>

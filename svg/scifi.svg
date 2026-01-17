@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="58.00" height="800.00" viewBox="0.00 0.00 116.00 1600.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g stroke-linecap="round" transform="translate(-64.00, -1462.00)" id="scifi">
+<path d="M125.31,1466.64 L135.76,1462.69 L136.46,1462.76 L146.50,1466.50 L146.50,1689.50 L166.50,1711.50 L166.50,1792.50 L148.50,1822.50 L148.50,1741.50 L125.45,1737.31 L125.31,1466.64 Z" 
+fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M69.44,1547.81 L88.31,1547.56 L97.50,1573.50 L97.50,1766.50 L121.50,1766.50 L121.50,1860.50 L68.50,1797.50 L68.50,1568.50 L69.44,1547.81 Z" 
+fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M114.50,2063.50 L136.50,2062.50 L136.50,2288.50 L170.50,2317.50 L170.50,2458.50 L164.50,2461.50 L158.50,2461.50 L151.50,2456.50 L151.50,2334.50 L114.36,2301.65 L114.50,2063.50 Z" 
+fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M75.50,2066.50 L99.50,2066.50 L99.50,2309.50 L130.50,2337.50 L130.50,2447.50 L116.94,2454.96 L103.50,2446.50 L103.50,2353.50 L69.50,2321.50 L69.50,2092.50 L75.50,2066.50 Z" 
+fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M106.97,2663.75 L179.50,2695.50 L179.50,3061.50 L154.50,3038.50 L154.50,2904.50 L106.40,2856.38 L106.97,2663.75 Z" 
+fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M64.34,2729.73 L76.14,2724.68 L77.38,2724.53 L89.50,2730.50 L89.50,2862.50 L139.54,2914.33 L139.54,2959.03 L115.97,2949.61 L115.56,2916.90 L64.55,2870.05 L64.34,2729.73 Z" 
+fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M115.30,2967.06 L138.57,2975.51 L138.20,3016.54 L138.17,3023.00 L115.74,3004.24 L115.30,2967.06 Z" 
+fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+</g>
+</svg>

@@ -328,8 +328,9 @@
          <div id="project-viewer" >
             <div class="viewer-backdrop"></div>
 
-        <div class="viewer-content">
+        <div class="viewer-content" id="mm">
             <div class="viewer-images"></div>
+            <div class="viewer-images2"></div>
         </div>
         </div>
 
@@ -386,11 +387,11 @@
             <h2 data-i18n="section_mascots">Mascot Design</h2>
                 <div class="portfolio-bg"><div class="portfolio-border" id="container"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg>
                     <div class="portfolio-item">
-                        <div class="portfolio-item-image2"><img src="visuals/mascot1.webp" alt= "Mascot 1" width="500" height="600"></div>
+                        <div class="portfolio-item-image2" id="m1"><img src="visuals/mascot1.webp" alt= "Mascot 1" width="500" height="600"></div>
                     </div></div>
                 <div class="portfolio-border" id="container"><svg class="border" width="109%" height="115%" viewBox="0 0 100 60" overflow="visible" preserveAspectRatio="none"><rect x="-3" y="-3" width="98" height="58" rx="0" ry="0"/></svg>
                     <div class="portfolio-item">
-                        <div class="portfolio-item-image2"><img src="visuals/mascot2.webp" alt="Mascot 2" width="500" height="600"></div>
+                        <div class="portfolio-item-image2" id="m2"><img src="visuals/mascot2.webp" alt="Mascot 2" width="500" height="600"></div>
                     </div></div></div>
         </section>
         <section id="font">
@@ -698,7 +699,7 @@
                 // print_packaging_desc: 'Designs d\'emballage accrocheurs pour les produits de vente au détail et promotionnels',
                 
                 // Mascot Section
-                section_mascots: 'Conception de Mascottes',
+                section_mascots: 'Design de Mascottes',
                 // mascot_animal_title: 'Mascottes Animales',
                 // mascot_animal_desc: 'Designs de personnages animaux ludiques et engageants pour les marques',
                 // mascot_custom_title: 'Personnages Personnalisés',
@@ -707,7 +708,7 @@
                 // mascot_emotional_desc: 'Personnages avec diverses expressions pour les campagnes marketing',
                 
                 // Font Section
-                section_fonts: 'Conception de Police Personnalisée',
+                section_fonts: 'Design de Police Personnalisée',
                 // font_serif_title: 'Polices Serif',
                 // font_serif_desc: 'Polices serif élégantes adaptées aux marques premium et aux publications',
                 // font_sans_title: 'Polices Sans-Serif',
@@ -741,6 +742,7 @@
         // Alternatives pictures directory
         const viewer = document.getElementById("project-viewer");
         const viewerImages = document.querySelector(".viewer-images");
+        const viewerImages2 = document.querySelector(".viewer-images2");
         const alts = {
             skyrunner: [
                 "visuals/alts/skyrunner.webp",
@@ -798,15 +800,14 @@
             viewerImages.innerHTML = "";
 
             alts[key].forEach(src => {
-            const img = document.createElement("img");
-            img.src = src;
-            viewerImages.appendChild(img);
+                const img = document.createElement("img");
+                img.src = src;
+                viewerImages.appendChild(img);
             });
 
             viewer.classList.add("active");
         });
         });
-
         document.querySelectorAll(".portfolio-item-image#pt").forEach(item => {
         item.addEventListener("click", () => {
             const key = item.dataset.print;
@@ -814,17 +815,41 @@
             viewerImages.innerHTML = "";
 
             prints[key].forEach(src => {
-            const img = document.createElement("img");
-            img.src = src;
-            viewerImages.appendChild(img);
+                const img = document.createElement("img");
+                img.src = src;
+                viewerImages.appendChild(img);
             });
 
             viewer.classList.add("active");
         });
         });
 
+        const mascot = ["visuals/mascot1.webp", "visuals/mascot2.webp"];
+        document.querySelectorAll(".portfolio-item-image2#m1").forEach(item => {
+        item.addEventListener("click", () => {
+            const src = mascot[0];
+            viewerImages2.innerHTML = "";
+            const img = document.createElement("img");
+            img.src = src;
+            viewerImages2.appendChild(img);
+            viewer.classList.add("active");
+        });
+        });
+        document.querySelectorAll(".portfolio-item-image2#m2").forEach(item => {
+        item.addEventListener("click", () => {
+            const src = mascot[1];
+            viewerImages2.innerHTML = "";
+            const img = document.createElement("img");
+            img.src = src;
+            viewerImages2.appendChild(img);
+            viewer.classList.add("active");
+        });
+        });
+
         function closeViewer() {
-        viewer.classList.remove("active");
+            viewer.classList.remove("active");
+            viewerImages.innerHTML = "";
+            viewerImages2.innerHTML = "";
         }
 
         viewer.querySelector(".viewer-backdrop").addEventListener("click", closeViewer);

@@ -321,7 +321,7 @@ body.dark-mode .portfolio-text {
 
 .portfolio-text p {
     font-family: "Sorapsis", sans-serif;
-    font-size: 47px;
+    font-size: 57px;
     justify-self: flex-start;
     text-align: left;
     /* padding: 1px; */
@@ -347,14 +347,22 @@ body.dark-mode .portfolio-bg {
 }
 
 .portfolio-item-image2 {
-    width: 200px;
-    height: 200px;
+    /* width: 200px;
+    height: 200px; */
+    max-height: 210px;
+    aspect-ratio: 1 / 1.5;
     object-fit: contain; 
     background-color: var(--button-bg-light);
     display: flex;
     align-items: center;
     justify-content: center;
     grid-column: 1;
+}
+
+.portfolio-item-image2 img {
+    margin-left: 50px;
+    margin-top: 100px;
+    transform: scale(0.7);
 }
 
 body.dark-mode .portfolio-item-image2 {
@@ -454,6 +462,10 @@ body.dark-mode .portfolio-item-image {
     background-color: var(--primary-dark);
 }
 
+.portfolio-item-image, .portfolio-item-image2 {
+    cursor:pointer;
+}
+
 /* Viewer section */
 
 #project-viewer {
@@ -485,9 +497,11 @@ body.dark-mode .portfolio-item-image {
 
 .viewer-content {
   position: relative;
+  width: fit-content;
   max-width: 1200px;
   margin: 10vh auto;
   padding: 2rem;
+  padding: clamp(1rem, 2vw, 2rem);
   background: var(--body-bg-light);
   border-radius: 12px;
 
@@ -506,13 +520,14 @@ body.dark-mode .viewer-content {
 }
 
 .viewer-images {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
 .viewer-images img {
-  width: 100%;
+  width: 260px;
+  max-width: 100%;
   height: 260px;
   object-fit: contain;
   background: #111;
@@ -524,7 +539,25 @@ body.dark-mode .viewer-content {
   aspect-ratio: 1 / 1; 
 }
 
-body.dark-mode .viewer-images img {
+.viewer-images2 {
+    max-width: 100%;
+}
+
+.viewer-images2 img {
+    width: 100%;
+    object-fit: contain;
+    background: #111;
+    padding: 1rem;
+    border-radius: 8px;
+    opacity: 0;
+    transform: scale(0);
+    animation: imgIn 0.4s ease forwards;
+    aspect-ratio: 1 / 1;
+    max-width: 750px;
+    max-height: 750px;
+}
+
+body.dark-mode .viewer-images img, body.dark-mode .viewer-images2 img {
     background: var(--primary-dark);
 }
 .viewer-images img:nth-child(1) { animation-delay: 0.1s; }
@@ -697,7 +730,7 @@ body.dark-mode .flower path.x02 {
     transform: scale(1.5);
     transform-origin: top left;
     overflow: hidden;
-    translate: 420px 1850px;
+    translate: 420px 1800px;
     z-index: 100;
 }
 

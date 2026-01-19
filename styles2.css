@@ -1,13 +1,13 @@
-@font-face {
+/* @font-face {
     font-family: "Autobahn";
     src:url("fonts/Autobahn.woff2") format("woff2"),
     url("fonts/Autobahn.woff") format("woff"),
     url("fonts/Autobahn.ttf") format("truetype");
-}
+} */
 @font-face {
     font-family: "Sorapsis";
-    src:url("fonts/Sorapsis-Regular-v1.woff") format("woff"),
-    url("fonts/Sorapsis-Regular-v1.otf") format("opentype");
+    src:url("fonts/SorapsisMedium.woff") format("woff"),
+    url("fonts/SorapsisMedium.ttf") format("truetype");
 }
 
 * {
@@ -31,32 +31,22 @@
     --button-bg-dark: #040465;
 }
 
-/* @keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-} */
+html {
+  position: relative;
+}
 
 body {
-    font-family: "Autobahn", sans-serif;
+    font-family: "Sorapsis", sans-serif;
     background-color: var(--light-bg);
-    /* background: linear-gradient(45deg, grey, #464A51); */
     color: var(--text-light);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* animation: gradient 1s ease infinite; */
+    position: relative;
 }
 
 body.dark-mode {
     background-color: var(--dark-bg);
-    /* background: linear-gradient(45deg, grey, #464A51); */
     color: var(--text-dark);
 }
 
@@ -65,14 +55,15 @@ header {
     /* outline: red solid 2px; */
     background-color: var(--light-bg);
     padding: 1rem 0;
-    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
     position: sticky;
     top: 0;
     z-index: 1000;
     /* flex-shrink: 0; */
-    max-width: 68%;
+    /* max-width: 68%; */
+    margin: 0 auto;
+    min-width: 1350px;
     max-height: 250px;
-    left: 310px;
+    /* left: 310px; */
     padding-top: 50px;
 
 }
@@ -150,7 +141,7 @@ body.dark-mode .btn-control {
     color: var(--text-light);
     font-size: 42px;
     text-align: left;
-    margin-top: 5px;
+    /* margin-top: 5px; */
 }
 .name {
     font-size: 75px;
@@ -167,8 +158,8 @@ body.dark-mode .btn-control {
   align-items: center;
   justify-content: center;
   text-align: left;
-  font-size: 40px;
-  font-weight: 100;
+  font-size: 34px;
+  /* font-weight: 100; */
   border: 1px solid var(--button-bg-light);
   margin-left: 20px;
   margin-top: -80px;
@@ -177,7 +168,7 @@ body.dark-mode .btn-control {
 .nav-menu a {
     text-decoration: none;
     color: var(--text-light);
-    margin-top: 7px;
+    /* margin-top: 7px; */
 }
 
 body.dark-mode .nav-menu {
@@ -197,7 +188,9 @@ button.btn-control svg:hover, select.btn-control:hover, .nav-menu a:hover {
 }
 
 .ui-grid {
-    position: absolute;
+    position: fixed;
+    width: 100%;
+    height: 100%;
     z-index: 1001;
     pointer-events: none;
     color: grey;
@@ -209,7 +202,11 @@ body.dark-mode .ui-grid {
 
 /* Main Container */
 main {
-    max-width: 1440px;
+    /* outline: 2px darkred solid; */
+    position: relative;
+    /* max-width: 1440px; */
+    max-width: 1350px;
+    min-width: 1350px;
     margin: 0 auto;
     padding: 2rem;
     /* flex: 1; */
@@ -324,10 +321,11 @@ body.dark-mode .portfolio-text {
 
 .portfolio-text p {
     font-family: "Sorapsis", sans-serif;
-    font-size: 59px;
+    font-size: 47px;
     justify-self: flex-start;
     text-align: left;
-    padding: 1px;
+    /* padding: 1px; */
+    margin-top: -2px;
 }
 
 section#mascot .portfolio-border, section#font .portfolio-text {
@@ -559,11 +557,26 @@ body.dark-mode .contact-section {
     color: var(--text-dark);
 }
 
+.contact-section h3 {
+    font-weight: 500;
+    font-size: 20px;
+    outline: 3px var(--primary-light) solid;
+    padding-bottom: 7px;
+    padding-top: 5px;
+    max-width: 65%;
+    margin: 0 auto;
+}
+
+body.dark-mode .contact-section h3 {
+    outline: 3px var(--primary-dark) solid;
+}
+
 .contact-info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin: 2rem 0;
+    margin-bottom: -5px;
 }
 
 .contact-item {
@@ -578,6 +591,7 @@ body.dark-mode .contact-section {
     color: var(--text-light);
     text-decoration: none;
     font-weight: 500;
+    font-size: 40px;
 }
 
 body.dark-mode .contact-item a {
@@ -763,15 +777,23 @@ body.dark-mode .star {
     stroke: currentColor;
 }
 
+.bgsvg {
+    position: absolute;
+    /* outline: blue 2px solid; */
+    inset: 0;
+    min-height: 100vh;
+    pointer-events: none;
+}
 
 .arrow-lines {
-    position: absolute;
+    /* position: absolute; */
     pointer-events: none;
     width: 140%;
     height: 1000%;
     top: -300px;
     left: -300px;
-    max-height: 129%;
+    max-width: 100%;
+    max-height: 100%;
     /* overflow: hidden; */
     transform-origin: top left;
     /* outline: red solid 2px; */
@@ -781,13 +803,11 @@ body.dark-mode .star {
 }
 
 .arrowleft {
-    /* outline: cyan solid 2px; */
     transform: translate(100px);
 }
 
 .arrowright {
-    /* outline: blue solid 2px; */
-    transform: translate(90px);
+    transform: translate(120px);
 }
 
 body.dark-mode .arrow-lines {
@@ -795,14 +815,14 @@ body.dark-mode .arrow-lines {
 }
 
 .dashstar {
-    position: absolute;
+    /* position: absolute; */
     pointer-events: none;
     width: 150%;
     height: 1000%;
     top: -200px;
-    left: -300px;
+    /* left: -30px; */
     max-width: 1850px;
-    max-height: 125%;
+    max-height: 100%;
     transform-origin: top left;
     /* outline: red solid 2px; */
     /* z-index: 1002; */
@@ -815,13 +835,16 @@ body.dark-mode .dashstar {
 .scifi {
     position: absolute;
     pointer-events: none;
-    width: 140%;
+    width: 135%;
     height: 1000%;
-    top: -200px;
-    left: -300px;
-    max-height: 125%;
+    /* top: 0; */
+    /* left: -18%; */
+    transform: translate( 0, -101%);
+    max-width: 1850px;
+    max-height: 96%;
+    transform-origin: top left;
     /* outline: red solid 2px; */
-    /* z-index: 1002; */
+    z-index: -1;
     display:none;
 }
 
@@ -869,23 +892,158 @@ body.dark-mode footer a {
 
 /* Responsive */
 @media (max-width: 768px) {
+    header {
+        min-width: auto;
+        max-width: 100%;
+        width: 100%;
+        padding: 1rem;
+        padding-top: 10px;
+    }
+
+    main {
+        min-width: auto;
+        max-width: 100%;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .control-buttons {
+        top: 10px;
+        right: auto;
+        left: 10px;
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        z-index: 1001;
+    }
+
+    .btn-control {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    .hero {
+        padding: 2rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+
     .hero h1 {
         font-size: 2rem;
     }
 
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .portfolio-grid2 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+    }
+
+    .portfolio-text {
+        grid-column: auto;
+        margin-bottom: 0;
+    }
+
+    .portfolio-text p {
+        font-size: 24px;
+    }
+
+    .portfolio-item-image2 {
+        grid-column: auto;
+        width: 150px;
+        height: 150px;
+    }
+
+    .portfolio-bg {
+        margin-top: 15px;
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: 1.5rem 0;
+    }
+
+    .contact-item a {
+        font-size: 24px;
+    }
+
+    .contact-section h3 {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        font-size: 16px;
+        gap: 1rem;
+    }
+
+    footer p {
+        grid-column: auto;
+    }
+
+    footer a {
+        margin: 0 auto;
+        font-size: 24px;
+    }
+
+    .shtTop {
+        grid-column: auto;
+        justify-self: auto;
+    }
+
+    .title {
+        align-items: center;
+    }
+
+    .title h2 {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .name {
+        font-size: 48px;
+    }
+
     .nav-menu {
-        gap: 1rem;
-        font-size: 0.9rem;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-
-    .control-buttons {
-        order: 3;
         width: 100%;
-        justify-content: center;
+        margin: 10px 0;
+        font-size: 20px;
+        height: 50px;
+    }
+
+    .squareline {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 95%;
+    }
+
+    .flowerwrap {
+        transform: scale(1);
+    }
+
+    .starwrap1, .starwrap2, .starwrap3 {
+        transform: scale(0.7);
+    }
+
+    .stargroup {
+        transform: scale(0.7);
+        margin: 0 auto;
     }
 }

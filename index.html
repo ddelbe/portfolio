@@ -223,6 +223,52 @@
     />
     </svg>
 
+    <!-- Background svg -->
+    <div class="bgsvg">
+        <svg class="arrow-lines">
+
+            <path class="arrowleft"
+                d="M 100 0 V 10000"
+                stroke="url(#arrow-pattern-down)"
+                stroke-width="300"
+                fill="currentColor"
+            />
+             <path class="arrowright"
+                d="M 1650 0 V 10000"
+                stroke="url(#arrow-pattern-up)"
+                stroke-width="250"
+                fill="currentColor"
+            />
+        </svg>
+        <svg class="dashstar">
+            <path class="dashstarleft"
+                d="M 200 0 V 10000"
+                stroke="url(#dashstar-pattern)"
+                stroke-width="250"
+                transform="translate(-25 0)"
+            />
+             <path class="dashstarright"
+                d="M 1650 0 V 10000"
+                stroke="url(#dashstar-pattern)"
+                stroke-width="315"
+                transform="translate(10 0)"
+            />
+        </svg>
+        <svg class="scifi">
+            <path class="scifileft"
+                d="M 200 0 V 10000"
+                stroke="url(#scifi-pattern)"
+                stroke-width="200"
+            />
+             <path class="scifiright"
+                d="M 1700 0 V 10000"
+                stroke="url(#scifi-pattern)"
+                stroke-width="300"
+                transform="translate(-60 0)"
+            />
+        </svg>
+    </div>
+
     <header>
 
         <nav>
@@ -309,6 +355,7 @@
                     </div></div>
             </div>
         </section>
+        
 
         <!-- Print Design Section -->
         <section id="print">
@@ -422,47 +469,6 @@
             </svg>
          </section>
         </section>
-         <svg class="arrow-lines">
-
-            <path class="arrowleft"
-                d="M 100 0 V 10000"
-                stroke="url(#arrow-pattern-down)"
-                stroke-width="300"
-                fill="currentColor"
-            />
-             <path class="arrowright"
-                d="M 1650 0 V 10000"
-                stroke="url(#arrow-pattern-up)"
-                stroke-width="250"
-                fill="currentColor"
-            />
-        </svg>
-        <svg class="dashstar">
-            <path class="dashstarleft"
-                d="M 200 0 V 10000"
-                stroke="url(#dashstar-pattern)"
-                stroke-width="250"
-                transform="translate(-40 0)"
-            />
-             <path class="dashstarright"
-                d="M 1650 0 V 10000"
-                stroke="url(#dashstar-pattern)"
-                stroke-width="315"
-            />
-        </svg>
-        <svg class="scifi">
-            <path class="scifileft"
-                d="M 200 0 V 10000"
-                stroke="url(#scifi-pattern)"
-                stroke-width="200"
-            />
-             <path class="scifiright"
-                d="M 1700 0 V 10000"
-                stroke="url(#scifi-pattern)"
-                stroke-width="300"
-                transform="translate(-90 0)"
-            />
-        </svg>
     </section>
 
 
@@ -476,24 +482,30 @@
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
             <h2 data-i18n="section_contact">Get In Touch</h2>
-            <p data-i18n="contact_intro">I'm always interested in hearing about new projects and opportunities.</p>
+            <h3 data-i18n="contact_intro">I'm always interested in hearing about new projects and opportunities.</h3>
             <div class="contact-info">
                 <div class="contact-item">
-                    <h4 data-i18n="contact_email_label">Email</h4>
+                    <h4>Email - </h4>
                     <a href="mailto:dewi.delbe@hotmail.fr">dewi.delbe@hotmail.fr</a>
                 </div>
-                <div class="contact-item">
+                <!-- <div class="contact-item">
                     <h4 data-i18n="contact_location_label">Location</h4>
                     <p data-i18n="contact_location_value">Creative City, Country</p>
-                </div>
-                <div class="contact-item">
+                </div> -->
+                <!-- <div class="contact-item">
                     <h4 data-i18n="contact_social_label">Social Media</h4>
                     <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a> | 
                     <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a> | 
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+                </div> -->
+                <div class="contact-item">
+                    <h4 data-i18n="contact_number_label">Phone</h4>
+                    <!-- <p>07 83 86 40 24</p> -->
+                     <a href="tel:+33783864024">07 83 86 40 24</a>
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer>
@@ -569,10 +581,11 @@
                 // Contact Section
                 section_contact: 'Get In Touch',
                 contact_intro: 'I\'m always interested in hearing about new projects and opportunities.',
-                contact_email_label: 'Email',
-                contact_location_label: 'Location',
-                contact_location_value: 'Creative City, Country',
-                contact_social_label: 'Social Media',
+                // contact_email_label: 'Email - ',
+                // contact_location_label: 'Location',
+                // contact_location_value: 'Creative City, Country',
+                // contact_social_label: 'Social Media',
+                contact_number_label: 'Phone - ',
                 
                 // Footer
                 footer_text: '© 2026 Dewi Delbe. All rights reserved.'
@@ -641,10 +654,11 @@
                 // Contact Section
                 section_contact: 'Ponte en Contacto',
                 contact_intro: 'Siempre me interesa escuchar sobre nuevos proyectos y oportunidades.',
-                contact_email_label: 'Correo Electrónico',
-                contact_location_label: 'Ubicación',
-                contact_location_value: 'Ciudad Creativa, País',
-                contact_social_label: 'Redes Sociales',
+                // contact_email_label: 'Correo Electrónico - ',
+                // contact_location_label: 'Ubicación',
+                // contact_location_value: 'Ciudad Creativa, País',
+                // contact_social_label: 'Redes Sociales',
+                contact_number_label: 'Teléfono - ',
                 
                 // Footer
                 footer_text: '© 2026 Dewi Delbe. Todos los derechos reservados.'
@@ -713,10 +727,11 @@
                 // Contact Section
                 section_contact: 'Restez en Contact',
                 contact_intro: 'Je suis toujours intéressé par les nouveaux projets et les opportunités.',
-                contact_email_label: 'Email',
-                contact_location_label: 'Localisation',
-                contact_location_value: 'Ville Créative, Pays',
-                contact_social_label: 'Réseaux Sociaux',
+                // contact_email_label: 'Email - ',
+                // contact_location_label: 'Localisation',
+                // contact_location_value: 'Ville Créative, Pays',
+                // contact_social_label: 'Réseaux Sociaux',
+                contact_number_label: 'Numéro - ',
                 
                 // Footer
                 footer_text: '© 2026 Dewi Delbe. Tous droits réservés.'

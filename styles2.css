@@ -360,9 +360,9 @@ body.dark-mode .portfolio-bg {
 }
 
 .portfolio-item-image2 img {
-    margin-left: 50px;
+    margin-left: 10px;
     margin-top: 100px;
-    transform: scale(0.7);
+    transform: scale(0.9);
 }
 
 body.dark-mode .portfolio-item-image2 {
